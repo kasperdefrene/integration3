@@ -1,3 +1,34 @@
-body{
-    background-color: hotpink;
+@import url("https://use.typekit.net/wtc6yih.css");
+
+:root{
+    --primary-color: #CEB2A1;
+
+    --title-font: bd-supper, sans-serif;
 }
+
+body {
+    position: relative;
+    background-color: #CEB2A1;
+    height: 100vh;
+  }
+  
+  .paperOverlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-repeat: repeat;
+    background-image: url("../public/overlay.png");
+    background-size: 100%;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+  }
+
+  h1{
+    font-family: var(--title-font);
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    margin-top: 2rem;
+  }
