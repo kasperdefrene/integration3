@@ -1,34 +1,40 @@
 @import url("https://use.typekit.net/wtc6yih.css");
 
 :root{
-    --primary-color: #CEB2A1;
+    --background-color: #2B2B2B;
+    --primary-color: #AB773A;
 
     --title-font: bd-supper, sans-serif;
 }
 
 body {
-    position: relative;
-    background-color: #CEB2A1;
-    height: 100vh;
-  }
-  
-  .paperOverlay {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-repeat: repeat;
-    background-image: url("../public/overlay.png");
-    background-size: 100%;
-    mix-blend-mode: multiply;
-    pointer-events: none;
-  }
+  background-color: var(--background-color);
+  min-height: 100vh;
+}
 
-  h1{
-    font-family: var(--title-font);
-    font-size: 3rem;
-    color: #fff;
-    text-align: center;
-    margin-top: 2rem;
-  }
+.main{
+  min-height: 100vh;
+}
+  
+
+h1{
+  font-family: var(--title-font);
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+
+.turntable__title{
+  font-family: var(--title-font);
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.turntable__playlist{}
+
+.turntable__playlist__item{
+  color: white;
+  display: flex;
+}
+
