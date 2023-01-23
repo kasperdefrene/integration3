@@ -6,58 +6,109 @@
     --text-color: white;
 
     --title-font: bd-supper, sans-serif;
+    --paragraph-font: europa, sans-serif;
 
     --font-size-xs: 0.5rem;
     --font-size-s: 1rem;
     --font-size-m: 1.5rem;
     --font-size-l: 2rem;
     --font-size-xl: 3rem;
+
+    --margin-xs: 0.5rem;
+    --margin-s: 1rem;
+    --margin-m: 2rem;
+    --margin-l: 3rem;
+    --margin-xl: 4rem;
 }
 
 body {
   background-color: var(--background-color);
   min-height: 100vh;
-  width: 90%;
-  margin: 0 auto;
   scrollbar-width: none;
   -ms-overflow-style: none;
+  color: var(--text-color);
 }
 
 body::-webkit-scrollbar {
   display: none;
 }
 
-.header{
-  height: 100vh;
+.hidden{
+  display: none;
 }
 
-.header__background{
-  position: absolute;
-  width: 70vw;
-  margin-inline-start: 5vw;
-  margin-block-start: 10vh;
-  opacity: 0.7;
+.navigation{
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.325);
 }
 
-.header__content{
-  position: relative;
+.navbar a{
+  color: var(--text-color);
+  text-decoration: none;
+  font-family: var(--paragraph-font);
+
 }
 
-h1{
-  font-family: var(--title-font);
-  font-size: 7rem;
-  color: #fff;
-  text-align: center; 
+.navbar__container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.3rem;
+
+}
+
+.logo{
+  width: 2vw;
 }
 
 .main{
   min-height: 100vh;
 }
 
+.fold{
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(30vh);
+}
+
+.fold__background{
+  grid-row: 1/ span 3;
+  grid-column: 1;
+  min-width: 50vw;
+  opacity: 0.4;
+  z-index: -1;
+  justify-self: center;
+}
+
+.fold .title{
+  grid-row: 1;
+  grid-column: 1;
+  justify-self: center;
+  align-self: center;
+}
+
+.fold .image{
+  min-width: 30vw;
+  grid-row: 2;
+  grid-column: 1;
+  justify-self: center;
+}
+
+.fold .arrows{
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: center;
+}
+
 /* wist je dat  */
 
 .wistjedat{
   color: var(--text-color);
+  display: grid;
+  grid-template-columns: 100vw;
+  grid-template-rows: repeat(4vh);
 }
 
 .wistjedat p{
@@ -71,19 +122,19 @@ h1{
 }
 
 .wistjedat__content{
-  margin-block-start: 3vh;
-  margin-block-end: 3vh;
-  width: 50vw;
-  margin: 0 auto;
+  grid-row: 1;
+  grid-column: 1;
 }
 
 .wistjedat__more{
-
+  grid-row: 2;
+  grid-column: 1;
 }
 
 .note__arrow{
-  width: 5vw;
-  margin-inline-start: 42.5vw;
+  grid-row: 3;
+  grid-column: 1;
+  justify-self: center;
 }
 
 /* turntable */
@@ -111,7 +162,42 @@ h1{
   width: 40vw;
 }
 
+footer{
+  text-align: center;
+  height: 10vh;
+  background-color: black;
+}
+
+footer p{
+  padding-block-start : 2%;
+}
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 800px) {
   
+  body{
+    width: 90%;
+  }
+
+  .navbar{
+    display: none;
+  }
+
+  .fold .title{
+    width: 80vw;
+  }
+
+  .fold .image{
+    width: 60vw;
+  }
 }
 

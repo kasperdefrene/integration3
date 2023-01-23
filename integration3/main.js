@@ -4,29 +4,34 @@ import './css/style.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
+let topButton = document.querySelector(".top_button");
 
+const topFunction = () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
 
-let mm = gsap.matchMedia();
+// let mm = gsap.matchMedia();
 
-// add a media query. When it matches, the associated function will run
-mm.add("(min-width: 800px)", () => {
+// // add a media query. When it matches, the associated function will run
+// mm.add("(min-width: 800px)", () => {
 
-  // this setup code only runs when viewport is at least 800px wide
-  //gsap.to(...);
-  //gsap.from(...);
-  //ScrollTrigger.create({...}); 
+//   // this setup code only runs when viewport is at least 800px wide
+//   //gsap.to(...);
+//   //gsap.from(...);
+//   //ScrollTrigger.create({...}); 
 
-  return () => { // optional
-    // custom cleanup code here (runs when it STOPS matching)
-  };
-});
+//   return () => { // optional
+//     // custom cleanup code here (runs when it STOPS matching)
+//   };
+// });
 
-// later, if we need to revert all the animations/ScrollTriggers...
-mm.revert();
+// // later, if we need to revert all the animations/ScrollTriggers...
+// mm.revert();
 
 
 const init = () => {
-
+    topButton.addEventListener("click", topFunction);
 }
 
 init();

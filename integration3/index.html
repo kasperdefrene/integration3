@@ -6,29 +6,29 @@
     <title>Accordeon de France</title>
   </head>
     <body>
-      <header class="header">
-        <img class="header__background" src="accordion_line.svg" alt="">
-        <div class="header__content">
-          <nav>
-            <ul>
-              <li><a href="#">Historie</a></li>
-              <li><a href="#">Jukebox</a></li>
-              <li><a href="#">Artiesten</a></li>
-              <li><a href="#">Meer</a></li>
-            </ul>
+      <header class="navigation">
+          <nav class="navbar">
+            <div class="navbar__container">
+              <a href="">Onderdelen</a>
+              <a href="">Jukebox</a>
+              <a href=""><img class="logo" src="mim.svg" alt=""></a>
+              <a href="">Historie</a>
+              <a href="">Artiesten</a>
+            </div>
           </nav>
-    
-          <h1>Accordeon</h1>
-          <div>
-            <img src="french_flag.svg" alt="French flag">
-            <h2>de France</h2>
-          </div>
-        </div>
-        
-  
-  
       </header>
+
       <main class="main">
+
+        <section class="fold">
+          <h1 class="hidden">Accordeon de France</h1>
+          <img class="fold__background" src="accordion_line.svg" alt="">
+          <img class="title" src="title.svg" alt="">
+          <img class="image" src="accordeon_fold.png" alt="">
+          <img class="arrows" src="arrows_down.svg" alt="">
+
+        </section>
+
         <section class="wistjedat">
           <p class="wistjedat__content"><em>Wist je dat</em> Roland onlangs de eerste elektronische accordeon op de markt heeft gebracht?</p>
           <p class="wistjedat__more">Lees verder over de accordeon!</p>
@@ -94,8 +94,10 @@
 
         </section>
 
-        <img src="note_up.svg" alt="note to go back up">
-        <p>Top</p>
+        <section class="top_button">
+          <img src="note_up.svg" alt="note to go back up">
+          <p>Top</p>
+        </section>
       </main>
       <footer>
         <p>© Accordeon de France</p>
