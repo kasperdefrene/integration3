@@ -4,10 +4,8 @@ import './css/style.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
-ScrollTrigger.config({ ignoreMobileResize: true});
 
 
-// create
 let mm = gsap.matchMedia();
 
 // add a media query. When it matches, the associated function will run
@@ -25,5 +23,10 @@ mm.add("(min-width: 800px)", () => {
 
 // later, if we need to revert all the animations/ScrollTriggers...
 mm.revert();
+
+
+const init = () => {
+
+}
 
 init();

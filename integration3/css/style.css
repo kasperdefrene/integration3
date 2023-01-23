@@ -3,8 +3,15 @@
 :root{
     --background-color: #2B2B2B;
     --primary-color: #AB773A;
+    --text-color: white;
 
     --title-font: bd-supper, sans-serif;
+
+    --font-size-xs: 0.5rem;
+    --font-size-s: 1rem;
+    --font-size-m: 1.5rem;
+    --font-size-l: 2rem;
+    --font-size-xl: 3rem;
 }
 
 body {
@@ -12,6 +19,12 @@ body {
   min-height: 100vh;
   width: 90%;
   margin: 0 auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .header{
@@ -20,19 +33,15 @@ body {
 
 .header__background{
   position: absolute;
-  width: 80vw;
-  margin: 0 auto;
+  width: 70vw;
+  margin-inline-start: 5vw;
+  margin-block-start: 10vh;
   opacity: 0.7;
 }
 
 .header__content{
   position: relative;
 }
-
-.main{
-  min-height: 100vh;
-}
-  
 
 h1{
   font-family: var(--title-font);
@@ -41,6 +50,43 @@ h1{
   text-align: center; 
 }
 
+.main{
+  min-height: 100vh;
+}
+
+/* wist je dat  */
+
+.wistjedat{
+  color: var(--text-color);
+}
+
+.wistjedat p{
+  text-align: center;
+  font-family: var(--title-font);
+  font-size: var(--font-size-m);
+}
+
+.wistjedat em{
+  color: var(--primary-color);
+}
+
+.wistjedat__content{
+  margin-block-start: 3vh;
+  margin-block-end: 3vh;
+  width: 50vw;
+  margin: 0 auto;
+}
+
+.wistjedat__more{
+
+}
+
+.note__arrow{
+  width: 5vw;
+  margin-inline-start: 42.5vw;
+}
+
+/* turntable */
 
 .turntable__title{
   font-family: var(--title-font);
@@ -64,3 +110,8 @@ h1{
 .turntable__vinyl{
   width: 40vw;
 }
+
+@media screen and (max-width: 800px) {
+  
+}
+
