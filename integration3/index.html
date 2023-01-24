@@ -23,9 +23,10 @@
         <section class="fold">
           <h1 class="hidden">Accordeon de France</h1>
           <img class="fold__background" src="accordion_line.svg" alt="">
-          <img class="title" src="title.svg" alt="">
-          <img class="image" src="accordeon_fold.png" alt="">
-          <img class="arrows" src="arrows_down.svg" alt="">
+          <img class="fold__title" src="title.svg" alt="">
+          <img class="fold__image" src="accordeon_fold.png" alt="">
+          <p class="fold__scroll">scroll down</p>
+          <img class="fold__arrows" src="arrows_down.svg" alt="">
 
         </section>
 
@@ -38,15 +39,25 @@
 
         <section class="image__stack">
 
+          <p class="image__stack__title">Accordeon de France</p>
+          <img class="image__stack__1" src="stack_2.webp" alt="">
+          <img class="image__stack__2" src="stack_1.webp" alt="">
+          <img class="image__stack__3" src="stack_3.webp" alt="">
+          <img class="image__stack__flag" src="french_flag.svg" alt="">
+          
+        </section>
+
+        <section class="intro">
+          <p class="intro__quota">"</p>
+          <p class="intro__text">De eifeltoren, gezellige drukte en een man die de accordeon bespeelt. Mensen die hun kleingeld kwijt kunnen in de opbergtas van de straatmuzikant, om vervolgens weer te vertrekken met een glimlach op hun gezicht</p>
         </section>
 
         <section class="accordion__parts">
 
         </section>
 
+        <h2 class="turntable__title">Turntable</h2>
         <section class="turntable">
-          <h2 class="turntable__title">Turntable</h2>
-          <div class="turntable__container">
             <div class="turntable__playlist">
               <div class="turntable__playlist__item">
                 <img src="Rectangle 2.jpg" alt="">
@@ -76,14 +87,14 @@
                   <p>Track</p>
                 </div>
               </div>
-              <img class="turntable__vinyl" src="disc1.png" alt="">
-              <div class="turntable__about">
-                <img src="" alt="">
-                <h3>Artist</h3>
-                <h4>Track</h4>
-                <p>Lorem Ipsum</p>
+            </div>
+            <img class="turntable__vinyl" src="disc1.png" alt="">
+            <div class="turntable__about">
+              <img src="" alt="">
+              <h3>Artist</h3>
+              <h4>Track</h4>
+              <p>Lorem Ipsum</p>
               </div>
-          </div>
         </section>
 
         <section class="history">
@@ -102,6 +113,10 @@
       <footer>
         <p>© Accordeon de France</p>
       </footer>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
       <script type="module" src="/main.js"></script>
       
     </body>

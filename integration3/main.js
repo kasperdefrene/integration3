@@ -4,7 +4,7 @@ import './css/style.css'
 
 gsap.registerPlugin(ScrollTrigger);
 
-let topButton = document.querySelector(".top_button");
+
 
 const topFunction = () => {
     document.body.scrollTop = 0;
@@ -31,6 +31,7 @@ const topFunction = () => {
 
 
 const init = () => {
+    let topButton = document.querySelector(".top_button");
     topButton.addEventListener("click", topFunction);
 }
 
