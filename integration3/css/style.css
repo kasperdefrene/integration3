@@ -27,6 +27,7 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -188,7 +189,7 @@ p{
   align-self: center;
 }
 
-.image__stack__1, .image__stack__2, .image__stack__3{
+.image__stack__1, .image__stack__2, .image__stack__3, .image__stack__4{
   grid-column: 2;
   grid-row: 1;
   justify-self: center;
@@ -199,19 +200,23 @@ p{
   text-align: center;
 }
 
+.image__stack__4{
+  z-index: 1;
+}
+
 .image__stack__1{
   transform: rotate(15deg);
-  z-index: 1;
+  z-index: 2;
 }
 
 .image__stack__2{
   transform: rotate(-10deg);
-  z-index: 2;
+  z-index: 3;
 }
 
 .image__stack__3{
   transform: rotate(5deg);
-  z-index: 3;
+  z-index: 4;
 }
 
 .image__stack__flag{
@@ -236,12 +241,13 @@ p{
   grid-row: 1;
   grid-column: 1;
   max-width: 50vw;
+  margin-inline-start: 30vw;
 }
 
 .intro__text{
   grid-row: 2;
   grid-column: 1;
-  max-width: 50vw;
+  max-width: 30vw;
   justify-self: center;
   line-height: 140%;
 }
@@ -267,7 +273,7 @@ p{
   align-self: center;
 }
 
-.turntable__playlist__item{
+.turntable__playlist__item__1, .turntable__playlist__item__2, .turntable__playlist__item__3, .turntable__playlist__item__4{
   color: white;
   display: flex;
 }
@@ -327,6 +333,16 @@ p{
   line-height: 150%;
 }
 
+.history img{
+  height: 3rem;
+  width: 100%;
+}
+
+.wood__1{
+  grid-row: 1;
+  grid-column: 1;
+}
+
 .history__title_1{
   grid-row: 1;
   grid-column: 1;
@@ -338,6 +354,11 @@ p{
 .history__text_1{
   grid-row: 1;
   grid-column: 2;
+}
+
+.wood__2{
+  grid-row: 2;
+  grid-column: 3;
 }
 
 .history__title_2{
@@ -353,6 +374,11 @@ p{
   grid-column: 2;
 }
 
+.wood__3{
+  grid-row: 3;
+  grid-column: 1;
+}
+
 .history__title_3{
   grid-row: 3;
   grid-column: 1;
@@ -363,6 +389,11 @@ p{
 .history__text_3{
   grid-row: 3;
   grid-column: 2;
+}
+
+.wood__4{
+  grid-row: 4;
+  grid-column: 3;
 }
 
 .history__title_4{
@@ -376,6 +407,11 @@ p{
 .history__text_4{
   grid-row: 4;
   grid-column: 2;
+}
+
+.wood__5{
+  grid-row: 5;
+  grid-column: 1;
 }
 
 .history__title_5{
@@ -450,7 +486,7 @@ footer p{
     writing-mode: horizontal-tb;
   }
 
-  .image__stack__1, .image__stack__2, .image__stack__3{
+  .image__stack__1, .image__stack__2, .image__stack__3, .image__stack__4{
     grid-column: 1;
     grid-row: 2;
     justify-self: center;
