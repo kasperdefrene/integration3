@@ -103,6 +103,55 @@ const imageStack = () => {
     
 }
 
+const history = () => {
+    gsap.from(".wood__1", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: vw(20) + ' bottom',
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
+    gsap.from(".wood__2", {
+        x: vw(25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: vw(40) + ' bottom',
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.from(".wood__3", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: vw(60) + ' bottom',
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.from(".wood__4", {
+        x: vw(25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: vw(80) + ' bottom',
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.from(".wood__3", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: vw(100) + ' bottom',
+            toggleActions: "restart none reverse reset",
+        }
+    });
+}
+
 
 
 
@@ -144,6 +193,8 @@ mm.add("(max-width: 767px)", () => {
         }, 4
         );
     }
+
+    
 
   return () => { // optional
     // custom cleanup code here (runs when it STOPS matching)
@@ -264,7 +315,7 @@ const topFunction = () => {
 }
 
 const init = () => {
-    let topButton = document.querySelector(".top_button");
+    let topButton = document.querySelector(".top__button");
     topButton.addEventListener("click", topFunction);
     
     imageStack();
@@ -273,6 +324,8 @@ const init = () => {
     trackTwo.addEventListener("click", playTrack2);
     trackThree.addEventListener("click", playTrack3);
     trackFour.addEventListener("click", playTrack4);
+
+    history();
 }
 
 init();
