@@ -141,7 +141,7 @@ const history = () => {
             toggleActions: "restart none reverse reset",
         }
     });
-    gsap.from(".wood__3", {
+    gsap.from(".wood__5", {
         x: vw(-25),
         duration: 1,
         scrollTrigger:{
@@ -207,6 +207,7 @@ mm.revert();
 
 // jukebox
 let playing = false;
+let song = "gus";
 
 let trackOne = document.querySelector(".turntable__playlist__item__1");
 let trackTwo = document.querySelector(".turntable__playlist__item__2");
@@ -217,6 +218,7 @@ let coverPlaying = document.querySelector(".cover__playing");
 let vinylPlaying = document.querySelector(".turntable__vinyl");
 let trackPlaying = document.querySelector(".track__playing");
 let artistPlaying = document.querySelector(".artist__playing");
+let aboutPlaying = document.querySelector(".about__playing");
  
 let playBtn = document.querySelector(".play__button");
 let pauseBtn = document.querySelector(".pause__button");
@@ -225,79 +227,98 @@ let trackList = [
     {
       name: "Valse à Ludmilla",
       artist: "Gus Viseur",
+      about: "Dit is een van de meest bekende musettes van Gus Viseur, een van de grootste accordeonisten uit de gouden eeuw van de musette.",
       image: "cover_1.jpg",
       vinyl: "disc1.png",
       path: "music/gus_viseur.mp3"
     },
     {
-        name: "Valse à Ludmilla",
-        artist: "Gus Viseur",
+        name: "La Java Bleue",
+        artist: "Joseph Colombo",
+        about:"Deze klassieker werd geschreven door Joseph Colombo, een andere bekende accordeonist uit de jaren 20 en 30.",
         image: "cover_2.jpg",
         vinyl: "disc2.png",
-        path: "music/gus_viseur.mp3"
+        path: "music/joseph_colombo.mp3"
       },
       {
-        name: "Valse à Ludmilla",
-        artist: "Gus Viseur",
+        name: "Valse Musette",
+        artist: "Tony Murena",
+        about:"Deze wals werd geschreven door Tony Murena, die bekend staat als een van de grootste accordeonisten aller tijden.",
         image: "cover_3.jpg",
         vinyl: "disc3.png",
-        path: "music/gus_viseur.mp3"
+        path: "music/tony_murenamp3"
       },
       {
-        name: "Valse à Ludmilla",
-        artist: "Gus Viseur",
+        name: "Bourrée d'Auvergne",
+        artist: "Roger Riffard",
+        about: "Dit is een traditionele bourrée uit de Auvergne regio gespeeld door Roger Riffard, een accordeonist die zich specialiseert in de traditionele Franse muziek.",
         image: "cover_4.jpg",
         vinyl: "disc4.png",
-        path: "music/gus_viseur.mp3"
+        path: "music/roger_riffard.mp3"
       },
 ];
 
 const playTrack1 = (event) => {
     new Audio(trackList[0].path).play();
 
-    coverPlaying.setAttribute("src", trackList[0].image);
+    coverPlaying.removeAttribute("src");
+    coverPlaying.src = trackList[0].image;
     vinylPlaying.removeAttribute("src");
     vinylPlaying.src = trackList[0].vinyl;
     trackPlaying.textContent = trackList[0].name;
     artistPlaying.textContent = trackList[0].artist;
+    aboutPlaying.textContent = trackList[0].about;
 
     playing = true;
+    song = "gus";
     spinningVinyl();
 }
 
 const playTrack2 = (event) => {
     new Audio(trackList[1].path).play();
 
-    coverPlaying.setAttribute("src", trackList[1].image);
-    vinylPlaying.setAttribute("src", trackList[1].vinyl);
+    coverPlaying.removeAttribute("src");
+    coverPlaying.src = trackList[1].image;
+    vinylPlaying.removeAttribute("src");
+    vinylPlaying.src = trackList[1].vinyl;
     trackPlaying.textContent = trackList[1].name;
     artistPlaying.textContent = trackList[1].artist;
+    aboutPlaying.textContent = trackList[1].about;
 
     playing = true;
+    song = "joseph";
     spinningVinyl();
 }
 
 const playTrack3 = (event) => {
     new Audio(trackList[2].path).play();
 
-    coverPlaying.setAttribute("src", trackList[2].image);
-    vinylPlaying.setAttribute("src", trackList[2].vinyl);
+    coverPlaying.removeAttribute("src");
+    coverPlaying.src = trackList[2].image;
+    vinylPlaying.removeAttribute("src");
+    vinylPlaying.src = trackList[2].vinyl;
     trackPlaying.textContent = trackList[2].name;
     artistPlaying.textContent = trackList[2].artist;
+    aboutPlaying.textContent = trackList[2].about;
 
     playing = true;
+    song = "tony";
     spinningVinyl();
 }
 
 const playTrack4 = (event) => {
     new Audio(trackList[3].path).play();
 
-    coverPlaying.setAttribute("src", trackList[3].image);
-    vinylPlaying.setAttribute("src", trackList[3].vinyl);
+    coverPlaying.removeAttribute("src");
+    coverPlaying.src = trackList[3].image;
+    vinylPlaying.removeAttribute("src");
+    vinylPlaying.src = trackList[3].vinyl;
     trackPlaying.textContent = trackList[3].name;
     artistPlaying.textContent = trackList[3].artist;
+    aboutPlaying.textContent = trackList[3].about;
 
     playing = true;
+    song = "roger";
     spinningVinyl();
 }
 
