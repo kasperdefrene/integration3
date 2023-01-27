@@ -41,29 +41,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-// const loadTL = gsap.timeline({
-//     duration: 5,
-//     scrollTrigger:{
-//         scroller: ".container",
-//         trigger: ".j2018",
-//         start: "top top",
-//         toggleActions: "restart none reverse reset",
-//         scrub: 2,
-//     }
-// });
-
-// loadTL.from(".fold__background", {
-//     opacity: 0,
-//     ease: Power2.easeOut,
-//     duration: 1,
-// },1
-// );
-// loadTL.from(".fold__title", {
-//     opacity: 0,
-//     ease: Power2.easeOut,
-//     duration: 1,
-// },2
-// );
 
 const imageStack = () => {
     const stackTL = gsap.timeline({
@@ -109,8 +86,9 @@ const history = () => {
         duration: 1,
         scrollTrigger:{
             trigger: ".history",
-            start: vw(20) + ' bottom',
+            start: "top, 50%",
             toggleActions: "restart none reverse reset",
+
         }
     });
 
@@ -118,36 +96,40 @@ const history = () => {
         x: vw(25),
         duration: 1,
         scrollTrigger:{
-            trigger: ".history",
-            start: vw(40) + ' bottom',
+            trigger: ".history__text_2",
+            start: "top, 50%",
             toggleActions: "restart none reverse reset",
+
         }
     });
     gsap.from(".wood__3", {
         x: vw(-25),
         duration: 1,
         scrollTrigger:{
-            trigger: ".history",
-            start: vw(60) + ' bottom',
+            trigger: ".history__text_3",
+            start: "top, 50%",
             toggleActions: "restart none reverse reset",
+
         }
     });
     gsap.from(".wood__4", {
         x: vw(25),
         duration: 1,
         scrollTrigger:{
-            trigger: ".history",
-            start: vw(80) + ' bottom',
+            trigger: ".history__text_4",
+            start: "top, 50%",
             toggleActions: "restart none reverse reset",
+
         }
     });
     gsap.from(".wood__5", {
         x: vw(-25),
         duration: 1,
         scrollTrigger:{
-            trigger: ".history",
-            start: vw(100) + ' bottom',
+            trigger: ".history__text_5",
+            start: "top, 50%",
             toggleActions: "restart none reverse reset",
+
         }
     });
 }
@@ -192,6 +174,19 @@ mm.add("(max-width: 767px)", () => {
             x: 1000,
         }, 4
         );
+    }
+
+    const history = () => {
+
+        gsap.to("#overlay", {
+            opacity: 0,
+            duration: 1,
+            scrollTrigger:{
+                trigger: ".history",
+                start: "top, 50%",
+                toggleActions: "restart none reverse reset",
+            }
+        });
     }
 
     
