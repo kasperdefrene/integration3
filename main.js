@@ -259,7 +259,7 @@ mm.add("(max-width: 767px)", () => {
         duration: 1,
         scrollTrigger:{
             trigger: ".history__image__1",
-            start: "top, 50%",
+            start: "50%, 50%",
             toggleActions: "restart none reverse reset",
         }
     });
