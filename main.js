@@ -80,6 +80,29 @@ const imageStack = () => {
     
 }
 
+const intro = () => {
+
+    gsap.from(".intro__quota", {
+        y: "20%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".intro__quota",
+            start: "10% , bottom",
+            toggleActions: "restart none reverse reset",
+        }
+    })
+    
+    gsap.from(".intro__text", {
+        opacity: 0.2,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".intro__text",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    })
+}
+
 const history = () => {
     gsap.from(".wood__1", {
         x: vw(-25),
@@ -155,11 +178,11 @@ mm.add("(max-width: 767px)", () => {
     });
 
     stackTL.from(".image__stack__title", {
-        x: -400,
+        x: "-100%",
     }, 1
     );
     stackTL.from(".image__stack__flag", {
-        x: 400,
+        x: "100%",
     }, 1
     );
     stackTL.from(".image__stack__1", {
@@ -176,13 +199,66 @@ mm.add("(max-width: 767px)", () => {
     );
 
 
+    gsap.from(".wood__1", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title_1",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+
+    gsap.from(".wood__2", {
+        x: vw(25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title_2",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+    gsap.from(".wood__3", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title_3",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+    gsap.from(".wood__4", {
+        x: vw(25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title_4",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+    gsap.from(".wood__5", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title_5",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
 
 
-    gsap.to("#overlay", {
+
+
+    gsap.to("#overlay__1", {
         opacity: 0,
         duration: 1,
         scrollTrigger:{
-            trigger: ".history",
+            trigger: ".history__image__1",
             start: "top, 50%",
             toggleActions: "restart none reverse reset",
         }
@@ -199,26 +275,79 @@ mm.add("(max-width: 767px)", () => {
 // later, if we need to revert all the animations/ScrollTriggers...
 mm.revert();
 
+//parts
+
+let accordeon = document.querySelector(".accordeon__overview");
+let close = document.querySelector(".close");
+
+let knoppen = document.querySelector(".knoppen__container");
+let klavier = document.querySelector(".klavier__container");
+let bellow = document.querySelector(".bellow__container");
+
+let knoppenOverlay = document.querySelector(".overlay__knoppen");
+let klavierOverlay = document.querySelector(".overlay__klavier");
+let bellowOverlay = document.querySelector(".overlay__bellow");
+
+
+const knoppenInfo = () => {
+    knoppenOverlay.classList.toggle("overlay__knoppen--active");
+}
+
+const klavierInfo = () => {
+    klavierOverlay.classList.toggle("overlay__klavier--active");
+}
+
+const bellowInfo = () => {
+    bellowOverlay.classList.toggle("overlay__bellow--active");
+}
+
+const closeTab = () => {
+    klavierOverlay.classList.remove("overlay__klavier--active");
+    bellowOverlay.classList.remove("overlay__bellow--active");
+    knoppenOverlay.classList.remove("overlay__knoppen--active");
+
+    // knoppenOverlay.classList.remove("overlay__knoppen--ac");
+    // klavierOverlay.classList.toggle("overlay__klavier");
+    // bellowOverlay.classList.toggle("overlay__bellow");
+}
+
+
+const knoppenImage = () => {
+    // accordeon.removeAttribute("src");
+    accordeon.src = "knoppen.png";
+}
+
+const klavierImage = () => {
+    // accordeon.removeAttribute("src");
+    accordeon.src = "klavier.png";
+}
+
+const bellowImage = () => {
+    // accordeon.removeAttribute("src");
+    accordeon.src = "bellow.png";
+}
+
 
 // jukebox
-let playing = false;
-let song = "gus";
+const playing = false;
 
-let trackOne = document.querySelector(".turntable__playlist__item__1");
-let trackTwo = document.querySelector(".turntable__playlist__item__2");
-let trackThree = document.querySelector(".turntable__playlist__item__3");
-let trackFour = document.querySelector(".turntable__playlist__item__4");
+let index = 0;
 
-let coverPlaying = document.querySelector(".cover__playing");
-let vinylPlaying = document.querySelector(".turntable__vinyl");
-let trackPlaying = document.querySelector(".track__playing");
-let artistPlaying = document.querySelector(".artist__playing");
-let aboutPlaying = document.querySelector(".about__playing");
+const trackOne = document.querySelector(".turntable__playlist__item__1");
+const trackTwo = document.querySelector(".turntable__playlist__item__2");
+const trackThree = document.querySelector(".turntable__playlist__item__3");
+const trackFour = document.querySelector(".turntable__playlist__item__4");
+
+const coverPlaying = document.querySelector(".cover__playing");
+const vinylPlaying = document.querySelector(".turntable__vinyl");
+const trackPlaying = document.querySelector(".track__playing");
+const artistPlaying = document.querySelector(".artist__playing");
+const aboutPlaying = document.querySelector(".about__playing");
  
-let playBtn = document.querySelector(".play__button");
-let pauseBtn = document.querySelector(".pause__button");
+const playBtn = document.querySelector(".turntable__play");
+const pauseBtn = document.querySelector(".turntable__pause");
 
-let trackList = [
+const trackList  = [
     {
       name: "Valse à Ludmilla",
       artist: "Gus Viseur",
@@ -253,68 +382,34 @@ let trackList = [
       },
 ];
 
-const playTrack1 = (event) => {
-   myAduio =  new Audio(trackList[0].path).play();
+let myAudio
+
+const playTrack = (index) => {
+    myAudio?.pause();
+
+   myAudio =  new Audio(trackList[index].path)
+   
+   myAudio.play();
 
     coverPlaying.removeAttribute("src");
-    coverPlaying.src = trackList[0].image;
+    coverPlaying.src = trackList[index].image;
     vinylPlaying.removeAttribute("src");
-    vinylPlaying.src = trackList[0].vinyl;
-    trackPlaying.textContent = trackList[0].name;
-    artistPlaying.textContent = trackList[0].artist;
-    aboutPlaying.textContent = trackList[0].about;
+    vinylPlaying.src = trackList[index].vinyl;
+    trackPlaying.textContent = trackList[index].name;
+    artistPlaying.textContent = trackList[index].artist;
+    aboutPlaying.textContent = trackList[index].about;
 
-    playing = true;
-    song = "gus";
+    playing == true;
     spinningVinyl();
 }
 
-const playTrack2 = (event) => {
-    new Audio(trackList[1].path).play();
-
-    coverPlaying.removeAttribute("src");
-    coverPlaying.src = trackList[1].image;
-    vinylPlaying.removeAttribute("src");
-    vinylPlaying.src = trackList[1].vinyl;
-    trackPlaying.textContent = trackList[1].name;
-    artistPlaying.textContent = trackList[1].artist;
-    aboutPlaying.textContent = trackList[1].about;
-
-    playing = true;
-    song = "joseph";
-    spinningVinyl();
+const play = (index) => {
+    playTrack(index);
 }
 
-const playTrack3 = (event) => {
-    new Audio(trackList[2].path).play();
-
-    coverPlaying.removeAttribute("src");
-    coverPlaying.src = trackList[2].image;
-    vinylPlaying.removeAttribute("src");
-    vinylPlaying.src = trackList[2].vinyl;
-    trackPlaying.textContent = trackList[2].name;
-    artistPlaying.textContent = trackList[2].artist;
-    aboutPlaying.textContent = trackList[2].about;
-
-    playing = true;
-    song = "tony";
-    spinningVinyl();
-}
-
-const playTrack4 = (event) => {
-    new Audio(trackList[3].path).play();
-
-    coverPlaying.removeAttribute("src");
-    coverPlaying.src = trackList[3].image;
-    vinylPlaying.removeAttribute("src");
-    vinylPlaying.src = trackList[3].vinyl;
-    trackPlaying.textContent = trackList[3].name;
-    artistPlaying.textContent = trackList[3].artist;
-    aboutPlaying.textContent = trackList[3].about;
-
-    playing = true;
-    song = "roger";
-    spinningVinyl();
+const pause = () => {
+    myAudio.pause();
+    playing == false;
 }
 
 const spinningVinyl = () => {
@@ -336,10 +431,32 @@ const init = () => {
     
     imageStack();
 
-    trackOne.addEventListener("click", playTrack1);
-    trackTwo.addEventListener("click", playTrack2);
-    trackThree.addEventListener("click", playTrack3);
-    trackFour.addEventListener("click", playTrack4);
+    intro();
+
+    knoppen.addEventListener("mouseover", knoppenImage);
+    klavier.addEventListener("mouseover", klavierImage);
+    bellow.addEventListener("mouseover", bellowImage);
+
+    knoppen.addEventListener("click", knoppenInfo);
+    klavier.addEventListener("click", klavierInfo);
+    bellow.addEventListener("click", bellowInfo);
+
+    close.addEventListener("click", closeTab);
+
+    trackOne.addEventListener("click", (e) =>{
+        playTrack(0);
+    });
+    trackTwo.addEventListener("click", (e) =>{
+        playTrack(1);
+    });
+    trackThree.addEventListener("click", (e) =>{
+        playTrack(2);
+    });
+    trackFour.addEventListener("click", (e) =>{
+        playTrack(3);
+    });
+    playBtn.addEventListener("click", play);
+    pauseBtn.addEventListener("click", pause);
 
     history();
 }
