@@ -144,50 +144,50 @@ let mm = gsap.matchMedia();
 // add a media query. When it matches, the associated function will run
 mm.add("(max-width: 767px)", () => {
 
-    const imageStack = () => {
-        const stackTL = gsap.timeline({
-            duration: 5,
-            scrollTrigger:{
-                trigger: ".image__stack",
-                start: "-=200 top",
-                toggleActions: "restart none reverse reset"
-            }
-        });
+   
+    const stackTL = gsap.timeline({
+        duration: 5,
+        scrollTrigger:{
+            trigger: ".image__stack",
+            start: "-=200 top",
+            toggleActions: "restart none reverse reset"
+        }
+    });
+
+    stackTL.from(".image__stack__title", {
+        x: -400,
+    }, 1
+    );
+    stackTL.from(".image__stack__flag", {
+        x: 400,
+    }, 1
+    );
+    stackTL.from(".image__stack__1", {
+        x: 1000,
+    }, 2
+    );
+    stackTL.from(".image__stack__2", {
+        x: -1000,
+    }, 3
+    );
+    stackTL.from(".image__stack__3", {
+        x: 1000,
+    }, 4
+    );
+
+
+
+
+    gsap.to("#overlay", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
     
-        stackTL.from(".image__stack__title", {
-            x: -400,
-        }, 1
-        );
-        stackTL.from(".image__stack__flag", {
-            x: 400,
-        }, 1
-        );
-        stackTL.from(".image__stack__1", {
-            x: 1000,
-        }, 2
-        );
-        stackTL.from(".image__stack__2", {
-            x: -1000,
-        }, 3
-        );
-        stackTL.from(".image__stack__3", {
-            x: 1000,
-        }, 4
-        );
-    }
-
-    const history = () => {
-
-        gsap.to("#overlay", {
-            opacity: 0,
-            duration: 1,
-            scrollTrigger:{
-                trigger: ".history",
-                start: "top, 50%",
-                toggleActions: "restart none reverse reset",
-            }
-        });
-    }
 
     
 
@@ -254,7 +254,7 @@ let trackList = [
 ];
 
 const playTrack1 = (event) => {
-    new Audio(trackList[0].path).play();
+   myAduio =  new Audio(trackList[0].path).play();
 
     coverPlaying.removeAttribute("src");
     coverPlaying.src = trackList[0].image;
