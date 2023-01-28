@@ -300,6 +300,7 @@ p{
   grid-column: 2;
   justify-self: center;
   align-self: center;
+  max-width: 30vw;
 }
 
 .klavier__container, .knoppen__container, .bellow__container{
@@ -463,6 +464,7 @@ p{
   max-width: 20vw;
   font-family: var(--paragraph-font);
   margin-block-start: 5%;
+  line-height: 140%;
 }
 
 .turntable__playpause{
@@ -1065,13 +1067,17 @@ footer p{
   }
 
   .turntable{
-    grid-template-rows: 50vh 40vh ;
+    grid-template-rows: 40vh 10vh 40vh ;
     grid-template-columns: repeat(50vw);
   }
 
+  .turntable__title{
+    margin-block-end: 10%;
+  }
+
   .turntable__playlist{
-    grid-row: 2;
-    grid-column: 1/span 2;
+    grid-row: 3;
+    grid-column: 1/span 3;
     justify-self: center;
     align-self: center;
   }
@@ -1086,7 +1092,19 @@ footer p{
 
   .turntable__about{
     grid-row: 1;
-    grid-column: 1;
+    grid-column: 1/ span 2;
+  }
+
+  .about__playing{
+    max-width: 90vw;
+  }
+
+  .cover__playing{
+    max-width: 30vw;
+  }
+
+  .turntable__playlist__cover{
+    max-width: 15vw;
   }
 
   /* history */

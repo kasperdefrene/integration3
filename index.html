@@ -59,7 +59,21 @@
           </section>
   
           <section class="accordion__parts" id="parts">
-            <img class="accordeon__overview" src="accordeon__parts.png" alt="">
+            <picture class="accordeon__overview">
+              <source 
+                srcset="accordeon__parts-min-250.avif 767w,
+                accordeon__parts-min-500.avif 1023w,
+                accordeon__parts-min-750.avif 1400w" type="image/avif">
+              <source 
+                srcset="accordeon__parts-min-250.webp 767w,
+                accordeon__parts-min-500.webp 1023w,
+                accordeon__parts-min-750.webp 1400w" type="image/webp">
+              <source 
+                srcset="accordeon__parts-min-250.png 767w,
+                accordeon__parts-min-500.png 1023w,
+                accordeon__parts-min-750.png 1400w" type="image/png">
+              <img class="accordeon__overview" src="accordeon__parts-min.png" alt="">
+            </picture>
             <div class="bellow__container">
               <svg class="info_1" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
@@ -116,7 +130,6 @@
                 <div class="turntable__playlist__item__1">
                   <img class="turntable__playlist__cover" src="cover_1.jpg" alt="">
                   <div>
-
                     <h3 class="playlist__artist">Gus Viseur</h3>
                     <p class="playlist__track">Valse à Ludmilla</p>
                   </div>
