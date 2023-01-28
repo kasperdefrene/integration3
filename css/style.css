@@ -1,9 +1,11 @@
 @import url("https://use.typekit.net/wtc6yih.css");
 
 :root{
-    --background-color: #2B2B2B;
-    --primary-color: #6a4111;
-    --text-color: white;
+  --background-color: #2B2B2B;
+  --secondary-background-color: #1a1a1a;
+  --primary-color: #AB773A;
+  --primary-color-opacity: #ab763ae8;
+  --text-color: white;
 
     --title-font: bd-supper, sans-serif;
     --paragraph-font: europa, sans-serif;
