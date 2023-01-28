@@ -2,7 +2,8 @@
 
 :root{
     --background-color: #2B2B2B;
-    --primary-color: #6a4111;
+    --primary-color: #AB773A;
+    --primary-color-opacity: #ab763ae8;
     --text-color: white;
 
     --title-font: bd-supper, sans-serif;
@@ -47,7 +48,7 @@ p{
 .navigation{
   position: sticky;
   top: 0;
-  background-color: rgba(60, 60, 60, 0.643);
+  background-color: rgba(60, 60, 60, 0.779);
   z-index: 99;
   cursor: pointer;
 }
@@ -88,7 +89,6 @@ p{
   display: grid;
   grid-template-columns: 100vw;
   grid-template-rows: 30vh 50vh 7vh;
-  margin-block-start: 3rem;
 }
 
 .fold__background{
@@ -258,6 +258,7 @@ p{
   max-width: 30vw;
   justify-self: center;
   line-height: 140%;
+  margin-block-end: 10%;
 }
 
 /* parts */
@@ -274,6 +275,16 @@ p{
 .accordion__parts h2{
   font-family: var(--title-font);
   font-size: var(--font-size-l);
+}
+
+.bellow__container:hover, .knoppen__container:hover, .klavier__container:hover{
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.bellow__container svg path:hover, .knoppen__container svg path:hover, .klavier__container svg path:hover{
+  cursor: pointer;
+  fill: var(--primary-color);
 }
 
 .accordion__parts p{
@@ -305,6 +316,12 @@ p{
   grid-row: 3;
 }
 
+.bellow__container{
+  grid-column: 2 /span 3;
+  grid-row: 2;
+  justify-self: flex-end;
+}
+
 .overlay__bellow, .overlay__klavier, .overlay__knoppen{
   display: none;
 }
@@ -314,10 +331,10 @@ p{
   grid-row: 1/span 3;
   height: 100%;
   width: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color-opacity);
   justify-self: center;
   align-self: center;
-  z-index: 1;
+  z-index: 3;
   display: grid;
   grid-template-columns: 10% 80% 10%;
   grid-template-rows: 10% 80% 10%;
@@ -329,6 +346,7 @@ p{
   justify-self: center;
   align-self: center;
   cursor: pointer;
+  z-index: 99;
 }
 
 .bellow__text, .klavier__text, .knoppen__text{
@@ -348,10 +366,11 @@ p{
 }
 
 .turntable__title{
-  font-family: var(--title-font);
-  font-size: 2rem;
+  font-family: var(--sierlijk-font);
+  font-size: var(--font-size-xl);
   color: var(--primary-color);
   padding-block-start: 10%;
+  text-align: center;
 }
 
 .turntable__playlist{
@@ -364,6 +383,26 @@ p{
 .turntable__playlist__item__1, .turntable__playlist__item__2, .turntable__playlist__item__3, .turntable__playlist__item__4{
   color: white;
   display: flex;
+  gap: 1.5rem;
+  margin-block-start: 1rem;
+}
+
+.turntable__playlist__item__1:hover, .turntable__playlist__item__2:hover, .turntable__playlist__item__3:hover, .turntable__playlist__item__4:hover{
+  cursor: pointer;
+  color: var(--primary-color);
+  
+}
+
+.playlist__artist{
+  font-family: var(--title-font);
+  font-size: var(--font-size-s);
+  margin-block-end: 5%;
+  margin-block-start: 5%;
+}
+
+.playlist__track{
+  font-family: var(--paragraph-font);
+  font-size: var(--font-size-m);
 }
 
 .turntable__vinyl{
@@ -407,8 +446,22 @@ p{
   max-width: 10vw;
 }
 
+.artist__playing{
+  font-family: var(--title-font);
+  font-size: var(--font-size-s);
+  margin-block-start: 5%;
+}
+
+.track__playing{
+  font-family: var(--paragraph-font);
+  font-size: var(--font-size-m);
+  margin-block-start: 5%;
+}
+
 .about__playing{
   max-width: 20vw;
+  font-family: var(--paragraph-font);
+  margin-block-start: 5%;
 }
 
 .turntable__playpause{

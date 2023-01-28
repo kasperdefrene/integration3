@@ -277,16 +277,16 @@ mm.revert();
 
 //parts
 
-let accordeon = document.querySelector(".accordeon__overview");
-let close = document.querySelector(".close");
+const accordeon = document.querySelector(".accordeon__overview");
+const close = document.querySelector(".close");
 
-let knoppen = document.querySelector(".knoppen__container");
-let klavier = document.querySelector(".klavier__container");
-let bellow = document.querySelector(".bellow__container");
+const knoppen = document.querySelector(".knoppen__container");
+const klavier = document.querySelector(".klavier__container");
+const bellow = document.querySelector(".bellow__container");
 
-let knoppenOverlay = document.querySelector(".overlay__knoppen");
-let klavierOverlay = document.querySelector(".overlay__klavier");
-let bellowOverlay = document.querySelector(".overlay__bellow");
+const knoppenOverlay = document.querySelector(".overlay__knoppen");
+const klavierOverlay = document.querySelector(".overlay__klavier");
+const bellowOverlay = document.querySelector(".overlay__bellow");
 
 
 const knoppenInfo = () => {
@@ -305,31 +305,24 @@ const closeTab = () => {
     klavierOverlay.classList.remove("overlay__klavier--active");
     bellowOverlay.classList.remove("overlay__bellow--active");
     knoppenOverlay.classList.remove("overlay__knoppen--active");
-
-    // knoppenOverlay.classList.remove("overlay__knoppen--ac");
-    // klavierOverlay.classList.toggle("overlay__klavier");
-    // bellowOverlay.classList.toggle("overlay__bellow");
 }
 
 
 const knoppenImage = () => {
-    // accordeon.removeAttribute("src");
     accordeon.src = "knoppen.png";
 }
 
 const klavierImage = () => {
-    // accordeon.removeAttribute("src");
     accordeon.src = "klavier.png";
 }
 
 const bellowImage = () => {
-    // accordeon.removeAttribute("src");
     accordeon.src = "bellow.png";
 }
 
 
 // jukebox
-const playing = false;
+let playing = false;
 
 let index = 0;
 
@@ -348,38 +341,38 @@ const playBtn = document.querySelector(".turntable__play");
 const pauseBtn = document.querySelector(".turntable__pause");
 
 const trackList  = [
-    {
-      name: "Valse à Ludmilla",
-      artist: "Gus Viseur",
-      about: "Dit is een van de meest bekende musettes van Gus Viseur, een van de grootste accordeonisten uit de gouden eeuw van de musette.",
-      image: "cover_1.jpg",
-      vinyl: "disc1.png",
-      path: "music/gus_viseur.mp3"
-    },
-    {
+        {
+        name: "Valse à Ludmilla",
+        artist: "Gus Viseur",
+        about: "Dit is een van de meest bekende musettes van Gus Viseur, een van de grootste accordeonisten uit de gouden eeuw van de musette.",
+        image: "cover_1.jpg",
+        vinyl: "disc1.png",
+        path: "music/gus_viseur.mp3"
+        },
+        {
         name: "La Java Bleue",
         artist: "Joseph Colombo",
         about:"Deze klassieker werd geschreven door Joseph Colombo, een andere bekende accordeonist uit de jaren 20 en 30.",
         image: "cover_2.jpg",
         vinyl: "disc2.png",
         path: "music/joseph_colombo.mp3"
-      },
-      {
+        },
+        {
         name: "Valse Musette",
         artist: "Tony Murena",
         about:"Deze wals werd geschreven door Tony Murena, die bekend staat als een van de grootste accordeonisten aller tijden.",
         image: "cover_3.jpg",
         vinyl: "disc3.png",
         path: "music/tony_murenamp3"
-      },
-      {
+        },
+        {
         name: "Bourrée d'Auvergne",
         artist: "Roger Riffard",
         about: "Dit is een traditionele bourrée uit de Auvergne regio gespeeld door Roger Riffard, een accordeonist die zich specialiseert in de traditionele Franse muziek.",
         image: "cover_4.jpg",
         vinyl: "disc4.png",
         path: "music/roger_riffard.mp3"
-      },
+        },
 ];
 
 let myAudio
@@ -399,7 +392,8 @@ const playTrack = (index) => {
     artistPlaying.textContent = trackList[index].artist;
     aboutPlaying.textContent = trackList[index].about;
 
-    playing == true;
+    playing = true;
+    console.log(playing);
     spinningVinyl();
 }
 
@@ -409,12 +403,16 @@ const play = (index) => {
 
 const pause = () => {
     myAudio.pause();
-    playing == false;
+    playing = false;
+    console.log(playing)
 }
 
 const spinningVinyl = () => {
-    if (playing == true) {
+    if (playing = true) {
         document.querySelector(".turntable__vinyl").classList.add("spin");
+    }
+    else if (playing = false) {
+        document.querySelector(".turntable__vinyl").classList.remove("spin");
     }
 }
 
@@ -437,22 +435,34 @@ const init = () => {
     klavier.addEventListener("mouseover", klavierImage);
     bellow.addEventListener("mouseover", bellowImage);
 
+    knoppen.addEventListener("mouseout", () => {
+        accordeon.src = "accordeon__parts.png";
+    });
+
+    klavier.addEventListener("mouseout", () => {
+        accordeon.src = "accordeon__parts.png";
+    });
+
+    bellow.addEventListener("mouseout", () => {
+        accordeon.src = "accordeon__parts.png";
+    });
+
     knoppen.addEventListener("click", knoppenInfo);
     klavier.addEventListener("click", klavierInfo);
     bellow.addEventListener("click", bellowInfo);
 
     close.addEventListener("click", closeTab);
 
-    trackOne.addEventListener("click", (e) =>{
+    trackOne.addEventListener("click", () =>{
         playTrack(0);
     });
-    trackTwo.addEventListener("click", (e) =>{
+    trackTwo.addEventListener("click", () =>{
         playTrack(1);
     });
-    trackThree.addEventListener("click", (e) =>{
+    trackThree.addEventListener("click", () =>{
         playTrack(2);
     });
-    trackFour.addEventListener("click", (e) =>{
+    trackFour.addEventListener("click", () =>{
         playTrack(3);
     });
     playBtn.addEventListener("click", play);
