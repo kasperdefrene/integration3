@@ -104,6 +104,36 @@ const intro = () => {
 }
 
 const history = () => {
+    gsap.from(".history__title", {
+        x: "-65%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
+    gsap.from(".history__subtitle", {
+        x: "65%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
+    gsap.from(".history__whisper", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__whisper",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
     gsap.from(".wood__1", {
         x: vw(-25),
         duration: 1,
@@ -363,7 +393,7 @@ const trackList  = [
         about:"Deze wals werd geschreven door Tony Murena, die bekend staat als een van de grootste accordeonisten aller tijden.",
         image: "cover_3.jpg",
         vinyl: "disc3.png",
-        path: "music/tony_murenamp3"
+        path: "music/tony_murena.mp3"
         },
         {
         name: "Bourrée d'Auvergne",

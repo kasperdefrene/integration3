@@ -2,6 +2,7 @@
 
 :root{
     --background-color: #2B2B2B;
+    --secondary-background-color: #1a1a1a;
     --primary-color: #AB773A;
     --primary-color-opacity: #ab763ae8;
     --text-color: white;
@@ -331,7 +332,7 @@ p{
   grid-row: 1/span 3;
   height: 100%;
   width: 100%;
-  background-color: var(--primary-color-opacity);
+  background-color: var(--secondary-background-color);
   justify-self: center;
   align-self: center;
   z-index: 3;
@@ -467,9 +468,10 @@ p{
 .turntable__playpause{
   grid-row: 2;
   grid-column: 2;
-  align-self: center;
+  align-self: flex-start;
   display: flex;
-
+  justify-self: center;
+  gap: 1rem;
 }
 
 .turntable__background{
@@ -477,7 +479,7 @@ p{
   grid-column: 2/span 3;
   z-index: -1;
   height: 100%;
-  opacity: 0.6;
+  opacity: 0.4;
 }
 
 /* history */
