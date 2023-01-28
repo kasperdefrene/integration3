@@ -308,7 +308,7 @@ mm.revert();
 //parts
 
 const accordeon = document.querySelector(".accordeon__overview");
-const close = document.querySelector(".close");
+const close = document.querySelectorAll(".close");
 
 const knoppen = document.querySelector(".knoppen__container");
 const klavier = document.querySelector(".klavier__container");
@@ -481,7 +481,9 @@ const init = () => {
     klavier.addEventListener("click", klavierInfo);
     bellow.addEventListener("click", bellowInfo);
 
-    close.addEventListener("click", closeTab);
+    close[0].addEventListener("click", closeTab);
+    close[1].addEventListener("click", closeTab);
+    close[2].addEventListener("click", closeTab);
 
     trackOne.addEventListener("click", () =>{
         playTrack(0);
