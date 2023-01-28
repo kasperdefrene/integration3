@@ -93,7 +93,7 @@ p{
   height: 100vh;
   display: grid;
   grid-template-columns: 100vw;
-  grid-template-rows: 30vh 50vh 7vh;
+  grid-template-rows: 30vh 35vh 7vh;
 }
 
 .fold__background{
@@ -282,16 +282,6 @@ p{
   font-size: var(--font-size-l);
 }
 
-.bellow__container:hover, .knoppen__container:hover, .klavier__container:hover{
-  cursor: pointer;
-  color: var(--primary-color);
-}
-
-.bellow__container svg path:hover, .knoppen__container svg path:hover, .klavier__container svg path:hover{
-  cursor: pointer;
-  fill: var(--primary-color);
-}
-
 .accordion__parts p{
   font-family: var(--paragraph-font);
   font-size: var(--font-size-m);
@@ -391,12 +381,6 @@ p{
   display: flex;
   gap: 1.5rem;
   margin-block-start: 1rem;
-}
-
-.turntable__playlist__item__1:hover, .turntable__playlist__item__2:hover, .turntable__playlist__item__3:hover, .turntable__playlist__item__4:hover{
-  cursor: pointer;
-  color: var(--primary-color);
-  
 }
 
 .playlist__artist{
@@ -535,10 +519,6 @@ p{
   justify-self: center;
   align-self: center;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-#overlay__1:hover, #overlay__2:hover, #overlay__3:hover, #overlay__4:hover, #overlay__5:hover{
-  opacity: 0;
 }
 
 .wood__1, .wood__2, .wood__3, .wood__4, .wood__5{
@@ -757,7 +737,34 @@ footer p{
 }
 
 
+@media (hover : hover) {
+  .bellow__container:hover, .knoppen__container:hover, .klavier__container:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+  }
 
+  .bellow__container svg path:hover, .knoppen__container svg path:hover, .klavier__container svg path:hover{
+    cursor: pointer;
+    fill: var(--primary-color);
+  }
+
+  .turntable__playlist__item__1:hover, .turntable__playlist__item__2:hover, .turntable__playlist__item__3:hover, .turntable__playlist__item__4:hover{
+    cursor: pointer;
+    color: var(--primary-color);
+    
+  }
+
+  #overlay__1:hover, #overlay__2:hover, #overlay__3:hover, #overlay__4:hover, #overlay__5:hover{
+    opacity: 0;
+  }
+  
+}
+
+@media (hover : none) {
+  .history__whisper{
+    display: none;
+  }
+}
 
 
 @media screen and (min-width: 768px) and (max-width: 1023){
@@ -865,10 +872,6 @@ footer p{
   }
 
   #overlay__1, #overlay__2, #overlay__3, #overlay__4, #overlay__5{
-    opacity: 1;
-  }
-
-  #overlay__1:hover, #overlay__2:hover, #overlay__3:hover, #overlay__4:hover, #overlay__5:hover{
     opacity: 1;
   }
 
@@ -1018,12 +1021,16 @@ footer p{
     display: none;
   }
 
+  .fold{
+    margin-block-start: 3rem;
+  }
+
   .fold__title{
-    width: 65vw;
+    width: 80vw;
   }
 
   .fold__image{
-    width: 60vw;
+    width: 85vw;
   }
 
   .wistjedat__content{
@@ -1069,6 +1076,23 @@ footer p{
   .intro__text{
     max-width: 90vw;
     opacity: 1;
+  }
+
+  .accordion__parts{
+    margin-block-start: 20%;
+    margin-block-end: 20%;
+  }
+  
+  .accordeon__overview{
+    max-width: 60vw;
+  }
+
+  .bellow, .klavier, .knoppen{
+    display: none;
+  }
+
+  .info_1{
+    align-self: center;
   }
 
   .turntable{
@@ -1260,6 +1284,14 @@ footer p{
     grid-row: 15;
     grid-column: 2;
     width: 90%;
+  }
+
+  .artist{
+    max-width: 80%;
+  }
+
+  .artist__image{
+    
   }
 }
 

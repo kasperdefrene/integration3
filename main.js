@@ -8,6 +8,46 @@ gsap.registerPlugin(ScrollTrigger);
 const vh = (coef) => window.innerHeight * (coef/100);
 const vw = (coef) => window.innerWidth * (coef/100);
 
+let mm = gsap.matchMedia();
+
+mm.add("(min-width: 768px)", () => {
+
+        const stackTL = gsap.timeline({
+            duration: 5,
+            scrollTrigger:{
+                trigger: ".image__stack",
+                start: vw(3) + ' top',
+                toggleActions: "restart none reverse reset",
+                scrub: 2,
+                pin: true,
+            }
+        });
+    
+        stackTL.from(".image__stack__title", {
+            x: vw(-20),
+        }, 1
+        );
+        stackTL.from(".image__stack__flag", {
+            x: vw(20),
+        }, 1
+        );
+        stackTL.from(".image__stack__1", {
+            x: vw(65),
+            rotation:90,
+        }, 2
+        );
+        stackTL.from(".image__stack__2", {
+            x: vw(-65),
+            rotation:-90,
+        }, 3
+        );
+        stackTL.from(".image__stack__3", {
+            x: vw(65),
+            rotation:90,
+        }, 4
+        );
+        
+    });
 
 window.addEventListener('DOMContentLoaded', () => {
     gsap.from(".fold__background", {
@@ -39,48 +79,8 @@ window.addEventListener('DOMContentLoaded', () => {
         opacity: 0,
         duration: 5,
     });
-});
 
 
-const imageStack = () => {
-    const stackTL = gsap.timeline({
-        duration: 5,
-        scrollTrigger:{
-            trigger: ".image__stack",
-            start: vw(3) + ' top',
-            toggleActions: "restart none reverse reset",
-            scrub: 2,
-            pin: true,
-        }
-    });
-
-    stackTL.from(".image__stack__title", {
-        x: vw(-20),
-    }, 1
-    );
-    stackTL.from(".image__stack__flag", {
-        x: vw(20),
-    }, 1
-    );
-    stackTL.from(".image__stack__1", {
-        x: vw(65),
-        rotation:90,
-    }, 2
-    );
-    stackTL.from(".image__stack__2", {
-        x: vw(-65),
-        rotation:-90,
-    }, 3
-    );
-    stackTL.from(".image__stack__3", {
-        x: vw(65),
-        rotation:90,
-    }, 4
-    );
-    
-}
-
-const intro = () => {
 
     gsap.from(".intro__quota", {
         y: "20%",
@@ -101,7 +101,10 @@ const intro = () => {
             toggleActions: "restart none reverse reset",
         }
     })
-}
+
+});
+
+
 
 const history = () => {
     gsap.from(".history__title", {
@@ -192,39 +195,42 @@ const history = () => {
 
 
 
-let mm = gsap.matchMedia();
 
-// add a media query. When it matches, the associated function will run
+
+const stackTL = gsap.timeline({
+    duration: 5,
+    scrollTrigger:{
+        trigger: ".image__stack",
+        start: "top top",
+        toggleActions: "restart none reverse reset",
+        pin: true,
+    }
+});
+
 mm.add("(max-width: 767px)", () => {
-
-   
-    const stackTL = gsap.timeline({
-        duration: 5,
-        scrollTrigger:{
-            trigger: ".image__stack",
-            start: "-=200 top",
-            toggleActions: "restart none reverse reset"
-        }
-    });
-
     stackTL.from(".image__stack__title", {
-        x: "-100%",
+        x: "-150%",
+        
     }, 1
     );
     stackTL.from(".image__stack__flag", {
-        x: "100%",
+        x: "180%",
+        
     }, 1
     );
     stackTL.from(".image__stack__1", {
-        x: "-100%",
+        x: "-150%",
+        rotation:90,
     }, 2
     );
     stackTL.from(".image__stack__2", {
-        x: "100%",
+        x: "150%",
+        rotation:-90,
     }, 3
     );
     stackTL.from(".image__stack__3", {
-        x: "-100%",
+        x: "-150%",
+        rotation:90,
     }, 4
     );
 
@@ -293,17 +299,33 @@ mm.add("(max-width: 767px)", () => {
             toggleActions: "restart none reverse reset",
         }
     });
+
+    gsap.from(".intro__quota", {
+        y: "20%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".intro__quota",
+            start: "10% , bottom",
+            toggleActions: "restart none reverse reset",
+        }
+    })
+    
+    gsap.from(".intro__text", {
+        opacity: 0.2,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".intro__text",
+            start: "50%, 90%",
+            toggleActions: "restart none reverse reset",
+        }
+    })
     
 
     
 
-  return () => { // optional
-    // custom cleanup code here (runs when it STOPS matching)
-  };
 });
 
 // later, if we need to revert all the animations/ScrollTriggers...
-mm.revert();
 
 //parts
 
@@ -428,22 +450,23 @@ const playTrack = (index) => {
 }
 
 const play = (index) => {
-    playTrack(index);
+    myAudio.play();
+    spinningVinyl();
 }
 
 const pause = () => {
     myAudio.pause();
-    playing = false;
-    console.log(playing)
+    stopSpinningVinyl();
 }
 
 const spinningVinyl = () => {
     if (playing = true) {
         document.querySelector(".turntable__vinyl").classList.add("spin");
     }
-    else if (playing = false) {
+}
+
+const stopSpinningVinyl = () => {
         document.querySelector(".turntable__vinyl").classList.remove("spin");
-    }
 }
 
 // top function
@@ -456,10 +479,7 @@ const topFunction = () => {
 const init = () => {
     let topButton = document.querySelector(".top__button");
     topButton.addEventListener("click", topFunction);
-    
-    imageStack();
 
-    intro();
 
     knoppen.addEventListener("mouseover", knoppenImage);
     klavier.addEventListener("mouseover", klavierImage);
