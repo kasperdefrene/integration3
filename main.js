@@ -216,15 +216,15 @@ mm.add("(max-width: 767px)", () => {
     }, 1
     );
     stackTL.from(".image__stack__1", {
-        x: 1000,
+        x: "-100%",
     }, 2
     );
     stackTL.from(".image__stack__2", {
-        x: -1000,
+        x: "100%",
     }, 3
     );
     stackTL.from(".image__stack__3", {
-        x: 1000,
+        x: "-100%",
     }, 4
     );
 

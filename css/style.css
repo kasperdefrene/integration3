@@ -42,6 +42,10 @@ p{
   font-size: var(--font-size-s);
 }
 
+.wrapper{
+  overflow-x: hidden;
+}
+
 .hidden{
   display: none;
 }
@@ -764,6 +768,7 @@ footer p{
 
   .wrapper{
     overflow-x: hidden;
+    position: relative;
   }
 
   .navbar{
@@ -1080,6 +1085,10 @@ footer p{
     grid-column: 1/span 3;
     justify-self: center;
     align-self: center;
+  }
+
+  .turntable__playlist__item__1:hover, .turntable__playlist__item__2:hover, .turntable__playlist__item__3:hover, .turntable__playlist__item__4:hover{
+    display: none;
   }
 
   .turntable__vinyl{
