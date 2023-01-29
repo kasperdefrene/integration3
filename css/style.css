@@ -44,6 +44,18 @@ p{
 
 .wrapper{
   overflow-x: hidden;
+  position: relative;
+}
+
+.background__texture{
+  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.04;
 }
 
 .hidden{
@@ -263,10 +275,31 @@ p{
   max-width: 30vw;
   justify-self: center;
   line-height: 140%;
+}
+
+.straatmuzikant{
+  max-width: 40vw;
+  margin: 0 auto;
+  display: grid;
   margin-block-end: 10%;
 }
 
 /* parts */
+
+.accordion__parts__title{
+  font-family: var(--title-font);
+  font-size: var(--font-size-xl);
+  text-align: center;
+  margin-block-end: 5%;
+}
+
+.accordion__parts__whisper{
+  font-family: var(--sierlijk-font);
+  font-size: var(--font-size-m);
+  color: var(--primary-color);
+  text-align: center;
+  margin-block-end: 5%;
+}
 
 .accordion__parts{
   display: grid;
@@ -345,6 +378,15 @@ p{
   z-index: 99;
 }
 
+.bellow__text__title, .klavier__text__title, .knoppen__text__title{
+  font-family: var(--title-font);
+  font-size: var(--font-size-l);
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  align-self: center;
+}
+
 .bellow__text, .klavier__text, .knoppen__text{
   grid-column: 2;
   grid-row: 2;
@@ -362,6 +404,16 @@ p{
 }
 
 .turntable__title{
+  font-family: var(--title-font);
+  font-size: var(--font-size-xl);
+  grid-row: 1;
+  grid-column: 2;
+  justify-self: center;
+  align-self: center;
+  text-align: center;
+}
+
+.turntable__whisper{
   font-family: var(--sierlijk-font);
   font-size: var(--font-size-xl);
   color: var(--primary-color);
@@ -835,6 +887,8 @@ footer p{
     opacity: 1;
   }
 
+  
+
   .turntable{
     grid-template-rows: 50vh 40vh ;
     grid-template-columns: repeat(50vw);
@@ -1078,13 +1132,40 @@ footer p{
     opacity: 1;
   }
 
+  .overlay__bellow--active, .overlay__klavier--active, .overlay__knoppen--active{
+    grid-column: 1/ span 3;
+    grid-row: 1/span 3;
+    height: 100%;
+    width: 100%;
+    background-color: var(--secondary-background-color);
+    justify-self: center;
+    align-self: center;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-rows: 10% 80% 10%;
+  }
+
+  .bellow__text, .klavier__text, .knoppen__text{
+    grid-column: 1/span 3;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+  }
+
   .accordion__parts{
+    max-width: 90vw;
     margin-block-start: 20%;
     margin-block-end: 20%;
   }
   
   .accordeon__overview{
     max-width: 60vw;
+  }
+
+  .accordion__parts p{
+    font-size: var(--font-size-s);
+    line-height: 160%;
   }
 
   .bellow, .klavier, .knoppen{
@@ -1102,6 +1183,7 @@ footer p{
 
   .turntable__title{
     margin-block-end: 10%;
+    font-size: var(--font-size-l);
   }
 
   .turntable__playlist{
@@ -1141,6 +1223,10 @@ footer p{
   }
 
   /* history */
+
+  .history__title{
+    margin-block-start: 30%;
+  }
 
   .history{
     display: grid;

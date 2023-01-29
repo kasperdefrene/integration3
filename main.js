@@ -102,41 +102,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     })
 
-});
-
-
-
-const history = () => {
-    gsap.from(".history__title", {
-        x: "-65%",
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__title",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-        }
-    });
-
-    gsap.from(".history__subtitle", {
-        x: "65%",
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__title",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-        }
-    });
-
-    gsap.from(".history__whisper", {
-        opacity: 0,
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__whisper",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-        }
-    });
-
     gsap.from(".wood__1", {
         x: vw(-25),
         duration: 1,
@@ -188,7 +153,43 @@ const history = () => {
 
         }
     });
-}
+
+});
+
+
+
+    gsap.from(".history__title", {
+        x: "-65%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
+    gsap.from(".history__subtitle", {
+        x: "65%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__title",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
+    gsap.from(".history__whisper", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__whisper",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+
+    
+
 
 
 
@@ -295,6 +296,42 @@ mm.add("(max-width: 767px)", () => {
         duration: 1,
         scrollTrigger:{
             trigger: ".history__image__1",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__2", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__2",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__3", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__3",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__4", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__4",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__5", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__5",
             start: "50%, 50%",
             toggleActions: "restart none reverse reset",
         }
@@ -519,8 +556,6 @@ const init = () => {
     });
     playBtn.addEventListener("click", play);
     pauseBtn.addEventListener("click", pause);
-
-    history();
 }
 
 init();
