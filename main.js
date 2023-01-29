@@ -57,7 +57,7 @@ let mm = gsap.matchMedia();
     }
   })
 
-mm.add("(min-width: 768px)", () => {
+mm.add("(min-width: 1023px)", () => {
 
         const stackTL = gsap.timeline({
             duration: 8,
@@ -94,7 +94,55 @@ mm.add("(min-width: 768px)", () => {
         }, 4
         );
         
+});
+
+mm.add("(min-width: 768px) and (max-width: 1023)", () => {
+    gsap.to("#overlay__1", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__1",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
     });
+    gsap.to("#overlay__2", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__2",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__3", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__3",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__4", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__4",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+    gsap.to("#overlay__5", {
+        opacity: 0,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__image__5",
+            start: "50%, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    });
+});
 
 window.addEventListener('DOMContentLoaded', () => {
     gsap.from(".fold__background", {
