@@ -10,255 +10,278 @@
     <link rel="manifest" href="/site.webmanifest">
   </head>
     <body>
-      <div class="wrapper">
-        <header class="navigation">
-            <nav class="navbar">
-              <div class="navbar__container">
-                <a href="#parts">Onderdelen</a>
-                <a href="#turntable">Jukebox</a>
-                <a href="#fold"><img class="logo" src="mim.svg" alt="logo van het mim"></a>
-                <a href="#history">Historie</a>
-                <a href="#jo">Jo Privat</a>
-              </div>
-            </nav>
-        </header>
-  
-        <main class="main">
-  
-          <section class="fold" id="fold">
-            <h1 class="hidden">Accordeon de France</h1>
-            <img class="fold__background" src="accordion_line.svg" alt="lijntekening van een accordeon op de achtergrond">
-            <img class="fold__title" src="title.svg" alt="titel van de website">
-            <picture class="fold__image">
-              <source 
-                sizes="(max-width: 767px) 250px,
-                (max-width: 1023px) 500px,
-                (max-width: 1400px) 750px,"
-
-                srcset="accordeon_fold-min-250.avif 767w,
-                accordeon_fold-min-500.avif 1023w,
-                accordeon_fold-min-750.avif 1400w" type="image/avif">
-              <source 
-                srcset="accordeon_fold-min-250.webp 767w,
-                accordeon_fold-min-500.webp 1023w,
-                accordeon_fold-min-750.webp 1400w" type="image/webp">
-              <source 
-                srcset="accordeon_fold-min-250.png 767w,
-                accordeon_fold-min-500.png 1023w,
-                accordeon_fold-min-750.png 1400w" type="image/png">
-                <img class="fold__image" src="accordeon_fold-min.png" alt="afbeelding van een accordeon">
-            </picture>
-            
-            <p class="fold__scroll">scroll down</p>
-            <img class="fold__arrows" src="arrows_down.svg" alt="pijltjes naar beneden">
-  
-          </section>
-  
-          <section class="wistjedat">
-            <p class="wistjedat__content"><em>Wist je dat</em> Roland onlangs de eerste elektronische accordeon op de markt heeft gebracht?</p>
-            <p class="wistjedat__more">Lees verder over de accordeon!</p>
-            <img class="note__arrow" src="note_arrow.svg" alt="noot met pijl">
-  
-          </section>
-  
-          <section class="image__stack">
-  
-            <p class="image__stack__title">Accordeon de France</p>
-            <img class="image__stack__4" src="stack_4.webp" alt="houten plaat achter de stack">
-            <img class="image__stack__1" src="stack_2.webp" alt="een man die de accordeon speelt">
-            <img class="image__stack__2" src="stack_1.webp" alt="een andere man die de accordeon speelt">
-            <img class="image__stack__3" src="stack_3.webp" alt="2 man met paardenmasker die accordeon spelen">
-            <img class="image__stack__flag" src="french_flag.svg" alt="de vlag van frankrijk">
-            
-          </section>
-  
-          <section class="intro">
-            <p class="intro__quota">"</p>
-            <p class="intro__text">De eifeltoren, gezellige drukte en een man die de accordeon bespeelt. Mensen die hun kleingeld kwijt kunnen in de opbergtas van de straatmuzikant, om vervolgens weer te vertrekken met een glimlach op hun gezicht</p>
-          </section>
-
-          <img class="straatmuzikant" src="straatmuzikant.png" alt="">
-  
-          <h2 class="accordion__parts__title">De onderdelen</h2>
-          <p class="accordion__parts__whisper">Klik de i'tjes!</p>
-          <section class="accordion__parts" id="parts">
-            <img class="accordeon__overview" src="accordeon__parts.png" alt="afbeelding van de accordeon waar onderdelen zichtbaar zijn">
-            <div class="bellow__container">
-              <svg class="info_1" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
-                <circle cx="21" cy="21" r="19.5" stroke="white" stroke-width="3"/>
-              </svg>
-              <h2 class="bellow">Bellow</h2>
-            </div>
-            <div class="overlay__bellow">
-              <svg class="close" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47888 0.943604L0.943359 4.47925L12.9646 16.5005L0.944305 28.5208L4.47986 32.0564L16.5002 20.0361L28.5205 32.0564L32.0561 28.521L20.0357 16.5005L32.057 4.47925L28.5215 0.943604L16.5001 12.9648L4.47888 0.943604Z" fill="#AB773A"/>
-              </svg>
-              <div class="bellow__text">
-                <h3 class="bellow__text__title">De bellow</h3>
-                <p>De bellow van een accordeon is het deel van het instrument waarmee lucht wordt aangezogen en uitgeblazen. Het is de "longen" van het instrument en zorgt voor de luchtstroom die nodig is om de noten te produceren. De bellow bestaat uit twee kamers, een aan de linkerkant en een aan de rechterkant, die door een centrale scheidingswand gescheiden zijn. Wanneer de bellow wordt ingedrukt, wordt lucht aangezogen in de linkerkant van de bellow en uitgeblazen in de rechterkant van de bellow, waardoor de noten worden geproduceerd.</p>
-              </div>
-            </div>
-            <div class="knoppen__container">
-              <svg class="info_2" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
-                <circle cx="21" cy="21" r="19.5" stroke="white" stroke-width="3"/>
-              </svg>
-              <h2 class="knoppen">Knoppen</h2>
-            </div>
-            <div class="overlay__knoppen">
-              <svg class="close" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47888 0.943604L0.943359 4.47925L12.9646 16.5005L0.944305 28.5208L4.47986 32.0564L16.5002 20.0361L28.5205 32.0564L32.0561 28.521L20.0357 16.5005L32.057 4.47925L28.5215 0.943604L16.5001 12.9648L4.47888 0.943604Z" fill="#AB773A"/>
-              </svg>
-              <div class="knoppen__text">
-                <h3 class="knoppen__text__title">De knoppen</h3>
-                <p>De knoppen van een accordeon worden gebruikt om de noten te spelen. Wanneer een knop wordt ingedrukt, wordt een klepje geopend dat de luchtstroom regelt die nodig is om de betreffende noot te produceren. Er zijn verschillende soorten accordeons met verschillende aantallen knoppen, maar een standaard accordeon heeft meestal 80 tot 120 knoppen, verdeeld over de linker- en rechterkant van het instrument. De knoppen aan de linkerkant van het instrument produceren de basnoten, terwijl de knoppen aan de rechterkant van het instrument de melodie noten produceren. De knoppen zijn vaak gerangschikt in groepen van vier of vijf, met elke groep corresponderend met een bepaalde toonreeks of octaaf. De knoppen zijn ook vaak gekleurd of gemarkeerd om te helpen bij het vinden van de juiste noot.</p>
-              </div>
-            </div>
-            <div class="klavier__container">
-              <svg class="info_3" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
-                <circle cx="21" cy="21" r="19.5" stroke="white" stroke-width="3"/>
-              </svg>
-              <h2 class="klavier">Klavier</h2>
-            </div>
-            <div class="overlay__klavier">
-              <svg class="close" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47888 0.943604L0.943359 4.47925L12.9646 16.5005L0.944305 28.5208L4.47986 32.0564L16.5002 20.0361L28.5205 32.0564L32.0561 28.521L20.0357 16.5005L32.057 4.47925L28.5215 0.943604L16.5001 12.9648L4.47888 0.943604Z" fill="#AB773A"/>
-              </svg>
-              <div class="klavier__text">
-                <h3 class="klavier__text__title">Het klavier</h3>
-                <p>De klavier van een accordeon is het deel van het instrument waarmee de muzikant de tonen produceert. Het bestaat uit rijen van toetsen die verbonden zijn met bellows (luchtkamers) die lucht door de harmonica's sturen. Elke toets op het klavier correspondeert met een specifieke noot of toon. Wanneer de muzikant een toets indrukt, opent deze de luchtstroom naar de harmonica die de corresponderende noot produceert.</p>
-              </div>
-            </div>
-          </section>
-  
-          <h2 class="turntable__title">Jukebox</h2>
-          <p class="turntable__whisper">Laat maar horen!</p>
-          <section class="turntable" id="turntable">
-              <div class="turntable__playlist">
-                <div class="turntable__playlist__item__1">
-                  <img class="turntable__playlist__cover" src="cover_1.jpg" alt="cover van het album van gus viseur">
-                  <div>
-                    <h3 class="playlist__artist">Gus Viseur</h3>
-                    <p class="playlist__track">Valse à Ludmilla</p>
-                  </div>
-                </div>
-                <div class="turntable__playlist__item__2">
-                  <img class="turntable__playlist__cover" src="cover_2.jpg" alt="cover van het album van joseph colombo">
-                  <div>
-                    <h3 class="playlist__artist">Joseph Colombo</h3>
-                    <p class="playlist__track">La Java Bleue</p>
-                  </div>
-                </div>
-                <div class="turntable__playlist__item__3">
-                  <img class="turntable__playlist__cover" src="cover_3.jpg" alt="cover van het album van tony murena">
-                  <div>
-                    <h3 class="playlist__artist">Tony Murena</h3>
-                    <p class="playlist__track">Valse Musette</p>
-                  </div>
-                </div>
-                <div class="turntable__playlist__item__4">
-                  <img class="turntable__playlist__cover" src="cover_4.jpg" alt="cover van het album van roger riffard">
-                  <div>
-                    <h3 class="playlist__artist">Roger Riffard</h3>
-                    <p class="playlist__track">Bourrée d'Auvergne</p>
-                  </div>
-                </div>
-              </div>
-              <img class="turntable__vinyl" src="disc1.png" alt="vinyl plaat">
-              <div class="turntable__about">
-                <img class="cover__playing" src="cover_1.jpg" alt="cover van het liedje dat speelt">
-                <h3 class="artist__playing">Gus Viseur</h3>
-                <h4 class="track__playing">Valse à Ludmilla</h4>
-                <p class="about__playing">Dit is een van de meest bekende musettes van Gus Viseur, een van de grootste accordeonisten uit de gouden eeuw van de musette.
-                </p>
-                </div>
-                <img class="turntable__background" src="background_turntable.webp" alt="achtergrond van de turntable">
-                <div class="turntable__playpause">
-                  <img class="turntable__play" src="play.svg" alt="play button">
-                  <img class="turntable__pause" src="pause.svg" alt="pause button">
-                </div>
-          </section>
-  
-          <h2 class="history__title"  id="history">Historie</h2>
-          <p class="history__subtitle">De Franse Musette</p>
-          <p class="history__whisper">Psst, ga met je muis over de afbeeldingen!</p>
-          <section class="history">
-            <img class="wood__1" src="stack_4.webp" alt="houten detail">
-            <h3 class="history__title_1">19e Eeuw</h3>
-            <p class="history__text_1">De Franse musette is een stijl van muziek die wordt gespeeld op de accordeon. Het ontstond in de 19e eeuw in Parijs en was populair onder arbeiders en immigranten. De stijl was geïnspireerd door traditionele Franse muziek, zoals de wals en de bourrée, en werd vaak gespeeld in cafés en bistro’s.</p>
-            <img class="history__image__1" src="19eeuw__overlay.webp" alt="kleurenversie van de groep mensen">
-            <img class="history__image__1" id="overlay__1" src="19eeuw.webp" alt="afbeelding van groep mensen die rond de accordeon speler staan">
-            <img class="wood__2" src="stack_4.webp" alt="">
-            <h3 class="history__title_2">1920-1930</h3>
-            <p class="history__text_2">In de jaren 20 en 30 van de 20e eeuw werd de musette steeds populairder in heel Europa, mede dankzij de opkomst van de radio en platenmaatschappijen die de muziek opnamen en uitbrachten. Veel bekende accordeonisten van die tijd, zoals Gus Viseur, Joseph Colombo en Tony Murena, waren grote sterren in Frankrijk en ver daarbuiten.</p>
-            <img class="history__image__2" src="1920__overlay.webp" alt="kleurenversie van de vrouw">
-            <img class="history__image__2" id="overlay__2" src="1920.webp" alt="vrouw in de jaren 20-30 op de accordeon">
-            <img class="wood__3" src="stack_4.webp" alt="">
-            <h3 class="history__title_3">1950</h3>
-            <p class="history__text_3">In de jaren 50 begon de populariteit van de musette echter af te nemen, mede door de opkomst van de rock-'n-roll en andere populaire muziekstijlen.</p>
-            <img class="history__image__3" src="1950__overlay.webp" alt="rock and roll gitaren">
-            <img class="history__image__3" id="overlay__3" src="1950.webp" alt="accordeon close up">
-            <img class="wood__4" src="stack_4.webp" alt="">
-            <h3 class="history__title_4">80-90</h3>
-            <p class="history__text_4">In de jaren 80 en 90 kende de stijl een revival, mede dankzij de inspanningen van jonge accordeonisten die de traditie wilden behouden.</p>
-            <img class="history__image__4" src="1980__overlay.webp" alt="jonge kerel op de accordeon">
-            <img class="history__image__4" id="overlay__4" src="1980.webp" alt="oude man op de accordeon">
-            <img class="wood__5" src="stack_4.webp" alt="houten detail">
-            <h3 class="history__title_5">Vandaag</h3>
-            <p class="history__text_5">Tegenwoordig wordt de Franse musette nog steeds gespeeld door accordeonisten over de hele wereld, hoewel het niet zo populair is als in het verleden. Er zijn echter nog steeds veel muzikanten die de stijl spelen en er zijn ook veel muziekfestivals en evenementen waar de muziek wordt gespeeld. </p>
-            <img class="history__image__5" src="vandaag__overlay.webp" alt="3 jonge straatmuzikanten">
-            <img class="history__image__5" id="overlay__5" src="vandaag.webp" alt="3 oudere straatmuzikanten">
-          </section>
-  
-          <section class="artist" id="jo">
-            <picture class="artist__image">
-              <source 
-                sizes="(max-width: 767px) 250px,
-                (max-width: 1023px) 500px,
-                (max-width: 1400px) 750px,"
-
-                srcset="jo_privat-min-250.avif 767w,
-                jo_privat-min-500.avif 1023w,
-                jo_privat-min-750.avif 1400w" type="image/avif">
-              <source 
-                srcset="jo_privat-min-250.webp 767w,
-                jo_privat-min-500.webp 1023w,
-                jo_privat-min-750.webp 1400w" type="image/webp">
-              <source 
-                srcset="jo_privat-min-250.png 767w,
-                jo_privat-min-500.png 1023w,
-                jo_privat-min-750.png 1400w" type="image/png">
-                <img class="artist__image" src="jo_privat-min.png" alt="Jo Privat">
-            </picture>
-            <h3 class="artist__name">Jo Privat</h3>
-            <h4 class="artist__songs">songs</h4>
-            <p class="artist__number">500</p>
-            <h4 class="artist__influence">invloed</h4>
-            <p class="artist__influence__1">zigeuners</p>
-            <p class="artist__influence__2">Amerikaanse Jazz</p>
-            <p class="artist__influence__3">Doedelzak</p>
-            <img class="artist__flag" src="french_flag.svg" alt="vlag van frankrijk">
-          </section>
-
-          <section class="visit">
-            <h2>Come and see!</h2>
-            <p>Het muziekinstrumentenmuseum, afgekort MIM heeft nog een heleboel meer instrumenten te bieden. Kom langs en bekijk ze allemaal</p>
-            <button><a href="">Koop tickets</a></button>
-          </section>
-  
-          <section class="top__button">
-            <img class="top__note" src="note_up.svg" alt="note to go back up">
-            <p class="top__text">Top</p>
-          </section>
-        </main>
-        <footer>
-          <p>© Accordeon de France - Kasper De Frene</p>
-          
-        </footer>
+      <div class="preloader">
+        <img class="loading__wheel" src="loading_wheel.svg" alt="loading wheel">
+        <img class="loading__logo" src="mim.svg" alt="mim logo">
+        <img class="loading__background" src="background.jpg" alt="">
       </div>
-      <img class="background__texture" src="background.jpg" alt="">
+        <div class="wrapper">
+          <header class="navigation">
+              <nav class="navbar">
+                <div class="navbar__container">
+                  <a href="#parts">Onderdelen</a>
+                  <a href="#turntable">Jukebox</a>
+                  <a href="#fold"><img class="logo" src="mim.svg" alt="logo van het mim"></a>
+                  <a href="#history">Historie</a>
+                  <a href="#jo">Jo Privat</a>
+                </div>
+              </nav>
+          </header>
+    
+          <main class="main">
+    
+            <section class="fold" id="fold">
+              <h1 class="hidden">Accordeon de France</h1>
+              <img class="fold__background" src="accordion_line.svg" alt="lijntekening van een accordeon op de achtergrond">
+              <img class="fold__title" src="title.svg" alt="titel van de website">
+              <picture class="fold__image">
+                <source 
+                  sizes="(max-width: 767px) 250px,
+                  (max-width: 1023px) 500px,
+                  (max-width: 1400px) 750px,"
+  
+                  srcset="accordeon_fold-min-250.avif 767w,
+                  accordeon_fold-min-500.avif 1023w,
+                  accordeon_fold-min-750.avif 1400w" type="image/avif">
+                <source 
+                  srcset="accordeon_fold-min-250.webp 767w,
+                  accordeon_fold-min-500.webp 1023w,
+                  accordeon_fold-min-750.webp 1400w" type="image/webp">
+                <source 
+                  srcset="accordeon_fold-min-250.png 767w,
+                  accordeon_fold-min-500.png 1023w,
+                  accordeon_fold-min-750.png 1400w" type="image/png">
+                  <img class="fold__image" src="accordeon_fold-min.png" alt="afbeelding van een accordeon">
+              </picture>
+              
+              <p class="fold__scroll">scroll down</p>
+              <img class="fold__arrows" src="arrows_down.svg" alt="pijltjes naar beneden">
+    
+            </section>
+    
+            <section class="wistjedat">
+              <p class="wistjedat__content"><em>Wist je dat</em> Roland onlangs de eerste elektronische accordeon op de markt heeft gebracht?</p>
+              <p class="wistjedat__more">Lees verder over de accordeon!</p>
+              <img class="note__arrow" src="note_arrow.svg" alt="noot met pijl">
+    
+            </section>
+    
+            <section class="image__stack">
+    
+              <p class="image__stack__title">Accordeon de France</p>
+              <img class="image__stack__4" src="stack_4.webp" alt="houten plaat achter de stack">
+              <img class="image__stack__1" src="stack_2.webp" alt="een man die de accordeon speelt">
+              <img class="image__stack__2" src="stack_1.webp" alt="een andere man die de accordeon speelt">
+              <img class="image__stack__3" src="stack_3.webp" alt="2 man met paardenmasker die accordeon spelen">
+              <img class="image__stack__flag" src="french_flag.svg" alt="de vlag van frankrijk">
+              
+            </section>
+    
+            <section class="intro">
+              <p class="intro__quota">"</p>
+              <p class="intro__text">De eifeltoren, gezellige drukte en een man die de accordeon bespeelt. Mensen die hun kleingeld kwijt kunnen in de opbergtas van de straatmuzikant, om vervolgens weer te vertrekken met een glimlach op hun gezicht</p>
+            </section>
+  
+            <img class="straatmuzikant" src="straatmuzikant.png" alt="">
+    
+            <h2 class="accordion__parts__title">De onderdelen</h2>
+            <p class="accordion__parts__whisper">Klik de i'tjes!</p>
+            <section class="accordion__parts" id="parts">
+              <img class="accordeon__overview" src="accordeon__parts.png" alt="afbeelding van de accordeon waar onderdelen zichtbaar zijn">
+              <div class="bellow__container">
+                <svg class="info_1" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
+                  <circle cx="21" cy="21" r="19.5" stroke="white" stroke-width="3"/>
+                </svg>
+                <h2 class="bellow">Bellow</h2>
+              </div>
+              <div class="overlay__bellow">
+                <svg class="close" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47888 0.943604L0.943359 4.47925L12.9646 16.5005L0.944305 28.5208L4.47986 32.0564L16.5002 20.0361L28.5205 32.0564L32.0561 28.521L20.0357 16.5005L32.057 4.47925L28.5215 0.943604L16.5001 12.9648L4.47888 0.943604Z" fill="#AB773A"/>
+                </svg>
+                <div class="bellow__text">
+                  <h3 class="bellow__text__title">De bellow</h3>
+                  <p>De bellow van een accordeon is het deel van het instrument waarmee lucht wordt aangezogen en uitgeblazen. Het is de "longen" van het instrument en zorgt voor de luchtstroom die nodig is om de noten te produceren. De bellow bestaat uit twee kamers, een aan de linkerkant en een aan de rechterkant, die door een centrale scheidingswand gescheiden zijn. Wanneer de bellow wordt ingedrukt, wordt lucht aangezogen in de linkerkant van de bellow en uitgeblazen in de rechterkant van de bellow, waardoor de noten worden geproduceerd.</p>
+                </div>
+              </div>
+              <div class="knoppen__container">
+                <svg class="info_2" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
+                  <circle cx="21" cy="21" r="19.5" stroke="white" stroke-width="3"/>
+                </svg>
+                <h2 class="knoppen">Knoppen</h2>
+              </div>
+              <div class="overlay__knoppen">
+                <svg class="close" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47888 0.943604L0.943359 4.47925L12.9646 16.5005L0.944305 28.5208L4.47986 32.0564L16.5002 20.0361L28.5205 32.0564L32.0561 28.521L20.0357 16.5005L32.057 4.47925L28.5215 0.943604L16.5001 12.9648L4.47888 0.943604Z" fill="#AB773A"/>
+                </svg>
+                <div class="knoppen__text">
+                  <h3 class="knoppen__text__title">De knoppen</h3>
+                  <p>De knoppen van een accordeon worden gebruikt om de noten te spelen. Wanneer een knop wordt ingedrukt, wordt een klepje geopend dat de luchtstroom regelt die nodig is om de betreffende noot te produceren. Er zijn verschillende soorten accordeons met verschillende aantallen knoppen, maar een standaard accordeon heeft meestal 80 tot 120 knoppen, verdeeld over de linker- en rechterkant van het instrument. De knoppen aan de linkerkant van het instrument produceren de basnoten, terwijl de knoppen aan de rechterkant van het instrument de melodie noten produceren. De knoppen zijn vaak gerangschikt in groepen van vier of vijf, met elke groep corresponderend met een bepaalde toonreeks of octaaf. De knoppen zijn ook vaak gekleurd of gemarkeerd om te helpen bij het vinden van de juiste noot.</p>
+                </div>
+              </div>
+              <div class="klavier__container">
+                <svg class="info_3" width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M22.344 15.272C21.64 15.272 21.0427 15.0267 20.552 14.536C20.0613 14.0453 19.816 13.448 19.816 12.744C19.816 12.04 20.0613 11.4427 20.552 10.952C21.0427 10.44 21.64 10.184 22.344 10.184C23.048 10.184 23.6453 10.44 24.136 10.952C24.648 11.4427 24.904 12.04 24.904 12.744C24.904 13.448 24.648 14.0453 24.136 14.536C23.6453 15.0267 23.048 15.272 22.344 15.272ZM20.168 33.192C19.144 33.192 18.312 32.872 17.672 32.232C17.0533 31.592 16.744 30.632 16.744 29.352C16.744 28.8187 16.8293 28.1253 17 27.272L19.176 17H23.784L21.48 27.88C21.3947 28.2 21.352 28.5413 21.352 28.904C21.352 29.3307 21.448 29.64 21.64 29.832C21.8533 30.0027 22.1947 30.088 22.664 30.088C23.048 30.088 23.3893 30.024 23.688 29.896C23.6027 30.9627 23.2187 31.784 22.536 32.36C21.8747 32.9147 21.0853 33.192 20.168 33.192Z" fill="white"/>
+                  <circle cx="21" cy="21" r="19.5" stroke="white" stroke-width="3"/>
+                </svg>
+                <h2 class="klavier">Klavier</h2>
+              </div>
+              <div class="overlay__klavier">
+                <svg class="close" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd" d="M4.47888 0.943604L0.943359 4.47925L12.9646 16.5005L0.944305 28.5208L4.47986 32.0564L16.5002 20.0361L28.5205 32.0564L32.0561 28.521L20.0357 16.5005L32.057 4.47925L28.5215 0.943604L16.5001 12.9648L4.47888 0.943604Z" fill="#AB773A"/>
+                </svg>
+                <div class="klavier__text">
+                  <h3 class="klavier__text__title">Het klavier</h3>
+                  <p>De klavier van een accordeon is het deel van het instrument waarmee de muzikant de tonen produceert. Het bestaat uit rijen van toetsen die verbonden zijn met bellows (luchtkamers) die lucht door de harmonica's sturen. Elke toets op het klavier correspondeert met een specifieke noot of toon. Wanneer de muzikant een toets indrukt, opent deze de luchtstroom naar de harmonica die de corresponderende noot produceert.</p>
+                </div>
+              </div>
+            </section>
+    
+            <h2 class="turntable__title">Jukebox</h2>
+            <p class="turntable__whisper">Laat maar horen!</p>
+            <section class="turntable" id="turntable">
+                <div class="turntable__playlist">
+                  <div class="turntable__playlist__item__1">
+                    <img class="turntable__playlist__cover" src="cover_1.jpg" alt="cover van het album van gus viseur">
+                    <div>
+                      <h3 class="playlist__artist">Gus Viseur</h3>
+                      <p class="playlist__track">Valse à Ludmilla</p>
+                    </div>
+                  </div>
+                  <div class="turntable__playlist__item__2">
+                    <img class="turntable__playlist__cover" src="cover_2.jpg" alt="cover van het album van joseph colombo">
+                    <div>
+                      <h3 class="playlist__artist">Joseph Colombo</h3>
+                      <p class="playlist__track">La Java Bleue</p>
+                    </div>
+                  </div>
+                  <div class="turntable__playlist__item__3">
+                    <img class="turntable__playlist__cover" src="cover_3.jpg" alt="cover van het album van tony murena">
+                    <div>
+                      <h3 class="playlist__artist">Tony Murena</h3>
+                      <p class="playlist__track">Valse Musette</p>
+                    </div>
+                  </div>
+                  <div class="turntable__playlist__item__4">
+                    <img class="turntable__playlist__cover" src="cover_4.jpg" alt="cover van het album van roger riffard">
+                    <div>
+                      <h3 class="playlist__artist">Roger Riffard</h3>
+                      <p class="playlist__track">Bourrée d'Auvergne</p>
+                    </div>
+                  </div>
+                </div>
+                <img class="turntable__vinyl" src="disc1.png" alt="vinyl plaat">
+                <div class="turntable__about">
+                  <img class="cover__playing" src="cover_1.jpg" alt="cover van het liedje dat speelt">
+                  <h3 class="artist__playing">Gus Viseur</h3>
+                  <h4 class="track__playing">Valse à Ludmilla</h4>
+                  <p class="about__playing">Dit is een van de meest bekende musettes van Gus Viseur, een van de grootste accordeonisten uit de gouden eeuw van de musette.
+                  </p>
+                  </div>
+                  <img class="turntable__background" src="background_turntable.webp" alt="achtergrond van de turntable">
+                  <div class="turntable__playpause">
+                    <img class="turntable__play" src="play.svg" alt="play button">
+                    <img class="turntable__pause" src="pause.svg" alt="pause button">
+                  </div>
+            </section>
+    
+            <h2 class="history__title"  id="history">Historie</h2>
+            <p class="history__subtitle">De Franse Musette</p>
+            <p class="history__whisper">Psst, ga met je muis over de afbeeldingen!</p>
+            <section class="history">
+              <img class="wood__1" src="stack_4.webp" alt="houten detail">
+              <h3 class="history__title_1">19e Eeuw</h3>
+              <p class="history__text_1">De Franse musette is een stijl van muziek die wordt gespeeld op de accordeon. Het ontstond in de 19e eeuw in Parijs en was populair onder arbeiders en immigranten. De stijl was geïnspireerd door traditionele Franse muziek, zoals de wals en de bourrée, en werd vaak gespeeld in cafés en bistro’s.</p>
+              <img class="history__image__1" src="19eeuw__overlay.webp" alt="kleurenversie van de groep mensen">
+              <img class="history__image__1" id="overlay__1" src="19eeuw.webp" alt="afbeelding van groep mensen die rond de accordeon speler staan">
+              <img class="wood__2" src="stack_4.webp" alt="">
+              <h3 class="history__title_2">1920-1930</h3>
+              <p class="history__text_2">In de jaren 20 en 30 van de 20e eeuw werd de musette steeds populairder in heel Europa, mede dankzij de opkomst van de radio en platenmaatschappijen die de muziek opnamen en uitbrachten. Veel bekende accordeonisten van die tijd, zoals Gus Viseur, Joseph Colombo en Tony Murena, waren grote sterren in Frankrijk en ver daarbuiten.</p>
+              <img class="history__image__2" src="1920__overlay.webp" alt="kleurenversie van de vrouw">
+              <img class="history__image__2" id="overlay__2" src="1920.webp" alt="vrouw in de jaren 20-30 op de accordeon">
+              <img class="wood__3" src="stack_4.webp" alt="">
+              <h3 class="history__title_3">1950</h3>
+              <p class="history__text_3">In de jaren 50 begon de populariteit van de musette echter af te nemen, mede door de opkomst van de rock-'n-roll en andere populaire muziekstijlen.</p>
+              <img class="history__image__3" src="1950__overlay.webp" alt="rock and roll gitaren">
+              <img class="history__image__3" id="overlay__3" src="1950.webp" alt="accordeon close up">
+              <img class="wood__4" src="stack_4.webp" alt="">
+              <h3 class="history__title_4">80-90</h3>
+              <p class="history__text_4">In de jaren 80 en 90 kende de stijl een revival, mede dankzij de inspanningen van jonge accordeonisten die de traditie wilden behouden.</p>
+              <img class="history__image__4" src="1980__overlay.webp" alt="jonge kerel op de accordeon">
+              <img class="history__image__4" id="overlay__4" src="1980.webp" alt="oude man op de accordeon">
+              <img class="wood__5" src="stack_4.webp" alt="houten detail">
+              <h3 class="history__title_5">Vandaag</h3>
+              <p class="history__text_5">Tegenwoordig wordt de Franse musette nog steeds gespeeld door accordeonisten over de hele wereld, hoewel het niet zo populair is als in het verleden. Er zijn echter nog steeds veel muzikanten die de stijl spelen en er zijn ook veel muziekfestivals en evenementen waar de muziek wordt gespeeld. </p>
+              <img class="history__image__5" src="vandaag__overlay.webp" alt="3 jonge straatmuzikanten">
+              <img class="history__image__5" id="overlay__5" src="vandaag.webp" alt="3 oudere straatmuzikanten">
+            </section>
+    
+            <section class="artist" id="jo">
+              <picture class="artist__image">
+                <source 
+                  sizes="(max-width: 767px) 250px,
+                  (max-width: 1023px) 500px,
+                  (max-width: 1400px) 750px,"
+  
+                  srcset="jo_privat-min-250.avif 767w,
+                  jo_privat-min-500.avif 1023w,
+                  jo_privat-min-750.avif 1400w" type="image/avif">
+                <source 
+                  srcset="jo_privat-min-250.webp 767w,
+                  jo_privat-min-500.webp 1023w,
+                  jo_privat-min-750.webp 1400w" type="image/webp">
+                <source 
+                  srcset="jo_privat-min-250.png 767w,
+                  jo_privat-min-500.png 1023w,
+                  jo_privat-min-750.png 1400w" type="image/png">
+                  <img class="artist__image" src="jo_privat-min.png" alt="Jo Privat">
+              </picture>
+              <h3 class="artist__name">Jo Privat</h3>
+              <h4 class="artist__songs">songs</h4>
+              <p class="artist__number">500</p>
+              <h4 class="artist__influence">invloed</h4>
+              <p class="artist__influence__1">zigeuners</p>
+              <p class="artist__influence__2">Amerikaanse Jazz</p>
+              <p class="artist__influence__3">Doedelzak</p>
+              <img class="artist__flag" src="french_flag.svg" alt="vlag van frankrijk">
+            </section>
+  
+            <section class="visit">
+              <h2>Come and see!</h2>
+              <p>Het muziekinstrumentenmuseum, afgekort MIM heeft nog een heleboel meer instrumenten te bieden. Kom langs en bekijk ze allemaal</p>
+              <button><a href="">Koop tickets</a></button>
+            </section>
+    
+            <section class="top__button">
+              <img class="top__note" src="note_up.svg" alt="note to go back up">
+              <p class="top__text">Top</p>
+            </section>
+          </main>
+          <footer>
+            <div class="footer__container">
+              <div class="footer__left">
+                <h3>Accordeon de France</h3>
+                <p>Accordeon de France is een museum in Parijs dat zich richt op de geschiedenis van de accordeon. Het museum is gevestigd in een voormalig klooster in de wijk Saint-Germain-des-Prés.</p>
+              </div>
+              <div class="footer__right">
+                <h3>contact</h3>
+                <p>Accordeon de France</p>
+                <p>1 Rue de l'Abbaye</p>
+                <p>75006 Paris</p>
+                <p>France</p>
+                <p>
+            </div>
+            <div class="footer__center__socialmedia">
+              <a href="https://www.facebook.com/accordeondefrance/" target="_blank"><img src="facebook.svg" alt="facebook logo"></a>
+              <a href="https://www.instagram.com/accordeondefrance/" target="_blank"><img src="instagram.svg" alt="instagram logo"></a>
+              <a href="https://twitter.com/accordeonfrance" target="_blank"><img src="twitter.svg" alt="twitter logo"></a>
+            </div>
+            <p>© Accordeon de France - Kasper De Frene</p>
+            
+          </footer>
+        <img class="background__texture" src="background.jpg" alt="">
+      </div>
 
 
       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>

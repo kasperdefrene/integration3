@@ -8,6 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 const vh = (coef) => window.innerHeight * (coef/100);
 const vw = (coef) => window.innerWidth * (coef/100);
 
+const preLoader = document.querySelector('.preloader');
+
+window.onload = function () {
+    console.log("loaded");
+    preLoader.classList.add("visually-hidden");
+  };
+
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 768px)", () => {
