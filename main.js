@@ -17,10 +17,50 @@ window.onload = function () {
 
 let mm = gsap.matchMedia();
 
+  gsap.from(".wistjedat__content", {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".wistjedat__content",
+        start: "top, 50%",
+        toggleActions: "restart none reverse reset",
+    }
+  });
+
+  gsap.from(".wistjedat__more", {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".wistjedat__more",
+        start: "top, 50%",
+        toggleActions: "restart none reverse reset",
+    }
+  });
+
+  gsap.from(".note__arrow", {
+    opacity: 0,
+    y: "120%",
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".wistjedat__more",
+        start: "top, 50%",
+        toggleActions: "restart none reverse reset",
+    }
+  });
+
+  gsap.from(".image__stack__4", {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".image__stack__4",
+        start: "top , 80%",
+    }
+  })
+
 mm.add("(min-width: 768px)", () => {
 
         const stackTL = gsap.timeline({
-            duration: 5,
+            duration: 8,
             scrollTrigger:{
                 trigger: ".image__stack",
                 start: vw(3) + ' top',
@@ -211,6 +251,7 @@ const stackTL = gsap.timeline({
         trigger: ".image__stack",
         start: "top top",
         toggleActions: "restart none reverse reset",
+        scrub: true,
         pin: true,
     }
 });
