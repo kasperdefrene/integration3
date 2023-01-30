@@ -139,6 +139,57 @@ mm.add("(min-width: 1023px)", () => {
         }, 4
         );
         
+        gsap.from(".wood__1", {
+            x: vw(-25),
+            duration: 1,
+            scrollTrigger:{
+                trigger: ".history__title_1",
+                start: "top, 50%",
+                toggleActions: "restart none reverse reset",
+    
+            }
+        });
+    
+        gsap.from(".wood__2", {
+            x: vw(25),
+            duration: 1,
+            scrollTrigger:{
+                trigger: ".history__title_2",
+                start: "top, 50%",
+                toggleActions: "restart none reverse reset",
+    
+            }
+        });
+        gsap.from(".wood__3", {
+            x: vw(-25),
+            duration: 1,
+            scrollTrigger:{
+                trigger: ".history__title_3",
+                start: "top, 50%",
+                toggleActions: "restart none reverse reset",
+    
+            }
+        });
+        gsap.from(".wood__4", {
+            x: vw(25),
+            duration: 1,
+            scrollTrigger:{
+                trigger: ".history__title_4",
+                start: "top, 50%",
+                toggleActions: "restart none reverse reset",
+    
+            }
+        });
+        gsap.from(".wood__5", {
+            x: vw(-25),
+            duration: 1,
+            scrollTrigger:{
+                trigger: ".history__title_5",
+                start: "top, 50%",
+                toggleActions: "restart none reverse reset",
+    
+            }
+        });
 });
 
 
