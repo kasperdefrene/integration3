@@ -1309,6 +1309,10 @@ footer p{
     opacity: 1;
   }
 
+  .straatmuzikant{
+    max-width: 90vw;
+  }
+
   .overlay__bellow--active, .overlay__klavier--active, .overlay__knoppen--active{
     grid-column: 1/ span 3;
     grid-row: 1/span 3;
@@ -1356,6 +1360,10 @@ footer p{
   .turntable{
     grid-template-rows: 40vh 10vh 40vh ;
     grid-template-columns: repeat(50vw);
+  }
+
+  .turntable__whisper{
+    margin-block-end: 5%;
   }
 
   .turntable__title{
@@ -1552,11 +1560,11 @@ footer p{
 
   .artist{
     grid-template-rows: 30vh 1fr 1fr 1fr 1fr 1fr 1fr;
-    max-width: 60vw;
+    max-width: 70vw;
   }
 
   .artist__image{
-    max-width: 60vw;
+    max-width: fit-content;
   }
 
   .visit{
