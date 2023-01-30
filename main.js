@@ -97,6 +97,79 @@ mm.add("(min-width: 1023px)", () => {
 });
 
 mm.add("(min-width: 768px) and (max-width: 1023)", () => {
+
+    gsap.from(".intro__quota", {
+        y: "20%",
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".intro__quota",
+            start: "10% , bottom",
+            toggleActions: "restart none reverse reset",
+        }
+    })
+    
+    gsap.from(".intro__text", {
+        opacity: 0.2,
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".intro__text",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+        }
+    })
+
+    gsap.from(".wood__1", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+
+    gsap.from(".wood__2", {
+        x: vw(25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__text_2",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+    gsap.from(".wood__3", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__text_3",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+    gsap.from(".wood__4", {
+        x: vw(25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__text_4",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+    gsap.from(".wood__5", {
+        x: vw(-25),
+        duration: 1,
+        scrollTrigger:{
+            trigger: ".history__text_5",
+            start: "top, 50%",
+            toggleActions: "restart none reverse reset",
+
+        }
+    });
+
     gsap.to("#overlay__1", {
         opacity: 0,
         duration: 1,
@@ -175,79 +248,6 @@ window.addEventListener('DOMContentLoaded', () => {
         duration: 5,
     });
 
-
-
-    gsap.from(".intro__quota", {
-        y: "20%",
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".intro__quota",
-            start: "10% , bottom",
-            toggleActions: "restart none reverse reset",
-        }
-    })
-    
-    gsap.from(".intro__text", {
-        opacity: 0.2,
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".intro__text",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-        }
-    })
-
-    gsap.from(".wood__1", {
-        x: vw(-25),
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-
-        }
-    });
-
-    gsap.from(".wood__2", {
-        x: vw(25),
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__text_2",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-
-        }
-    });
-    gsap.from(".wood__3", {
-        x: vw(-25),
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__text_3",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-
-        }
-    });
-    gsap.from(".wood__4", {
-        x: vw(25),
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__text_4",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-
-        }
-    });
-    gsap.from(".wood__5", {
-        x: vw(-25),
-        duration: 1,
-        scrollTrigger:{
-            trigger: ".history__text_5",
-            start: "top, 50%",
-            toggleActions: "restart none reverse reset",
-
-        }
-    });
 
 });
 
