@@ -11,9 +11,43 @@ const vw = (coef) => window.innerWidth * (coef/100);
 const preLoader = document.querySelector('.preloader');
 
 window.onload = function () {
-    console.log("loaded");
     preLoader.classList.add("visually-hidden");
-  };
+};
+
+
+window.addEventListener('DOMContentLoaded', () => {
+    gsap.from(".fold__background", {
+        opacity: 0,
+        duration: 1,
+    });
+
+    gsap.from(".fold__title",{
+        opacity: 0,
+        duration: 2,
+    });
+
+    gsap.from(".fold__image",{
+        opacity: 0,
+        duration: 2,
+    });
+
+    gsap.from(".navigation",{
+        y: vh(-10),
+        duration: 1,
+    });
+
+    gsap.from(".fold__scroll",{
+        y: vh(10),
+        duration: 1,
+    });
+
+    gsap.from(".fold__arrows",{
+        opacity: 0,
+        duration: 5,
+    });
+
+
+});
 
 let mm = gsap.matchMedia();
 
@@ -54,8 +88,19 @@ let mm = gsap.matchMedia();
     scrollTrigger:{
         trigger: ".image__stack__4",
         start: "top , 80%",
+        toggleActions: "restart none reverse reset",
     }
   })
+
+  gsap.from (".artist", {
+    opacity: 0,
+    duration: 1,
+    scrollTrigger:{
+        trigger: ".artist__title",
+        start: "top, 50%",
+        toggleActions: "restart none reverse reset",
+    }
+  });
 
 mm.add("(min-width: 1023px)", () => {
 
@@ -96,7 +141,46 @@ mm.add("(min-width: 1023px)", () => {
         
 });
 
-mm.add("(min-width: 768px) and (max-width: 1023)", () => {
+
+
+
+mm.add("screen and (min-width: 768px) and (max-width: 1023px)", () => {
+
+
+    const stackTL = gsap.timeline({
+        duration: 8,
+        scrollTrigger:{
+            trigger: ".image__stack",
+            start: vw(3) + ' top',
+            toggleActions: "restart none reverse reset",
+            scrub: 2,
+            pin: true,
+        }
+    });
+
+    stackTL.from(".image__stack__title", {
+        x: "-300%",
+    }, 1
+    );
+    stackTL.from(".image__stack__flag", {
+        x: "350%",
+    }, 1
+    );
+    stackTL.from(".image__stack__1", {
+        x: "-250%",
+        rotation:90,
+    }, 2
+    );
+    stackTL.from(".image__stack__2", {
+        x: "250%",
+        rotation:-90,
+    }, 3
+    );
+    stackTL.from(".image__stack__3", {
+        x: "-250%",
+        rotation:90,
+    }, 4
+    );
 
     gsap.from(".intro__quota", {
         y: "20%",
@@ -217,39 +301,7 @@ mm.add("(min-width: 768px) and (max-width: 1023)", () => {
     });
 });
 
-window.addEventListener('DOMContentLoaded', () => {
-    gsap.from(".fold__background", {
-        opacity: 0,
-        duration: 1,
-    });
 
-    gsap.from(".fold__title",{
-        opacity: 0,
-        duration: 2,
-    });
-
-    gsap.from(".fold__image",{
-        opacity: 0,
-        duration: 2,
-    });
-
-    gsap.from(".navigation",{
-        y: vh(-10),
-        duration: 1,
-    });
-
-    gsap.from(".fold__scroll",{
-        y: vh(10),
-        duration: 1,
-    });
-
-    gsap.from(".fold__arrows",{
-        opacity: 0,
-        duration: 5,
-    });
-
-
-});
 
 
 
@@ -578,7 +630,6 @@ const playTrack = (index) => {
     aboutPlaying.textContent = trackList[index].about;
 
     playing = true;
-    console.log(playing);
     spinningVinyl();
 }
 
